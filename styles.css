@@ -3,50 +3,82 @@ body {
     font-family: 'Sofia Sans', sans-serif;
     color: #212121;
   }
-  
-  ul.topnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden
-  }
-  
-  ul.topnav a {float: right;}
-  
-  ul.topnav a.right {float: right;}
-  
-  ul.topnav a.nav-brand {
-    float: left;
-    color: #be3455;
-    font-weight: bold;
-    font-size: 2rem
-  }
-  
-  ul.topnav a.active {
-    color: #be3455;
-    text-decoration: underline
-  }
-  
-  ul.topnav li a {
-    display: block;
-    color: #212121;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.5rem
-  }
-  
-  ul.topnav li a.active:hover {
-    color: #d9627e
-  }
-  
-  ul.topnav li a.nav-brand:hover {
-    color: #d9627e 
-  }
-  
-  ul.topnav li a.right:hover {
-    color: #d9627e
-  }
+
+/** Navbar **/
+#nav-bar {
+	left: 0%;
+	right: 0%;
+	background-color: white;
+	position: fixed;
+	top: -70px;
+	display: block;
+	transition: top 0.4s;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	z-index: 1;
+}
+
+.nav-item:first-child {
+	float: left;
+	font-weight: 500;
+}
+
+.nav-item {
+	color: #2a2d34;
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 22px;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.nav-item:hover {
+	color: #2a2d34;
+	transition: 0.5s;
+}
+
+
+.nav-item:hover:after {
+  transform: scaleX(1);
+}
+
+.nav-item::after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #d3cbf5;  
+  transform: scaleX(0);  
+  transition: 350ms ease-in-out;
+  transform-origin: 0% 50%;
+}
+
+.page-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem
+}
+
+.landing-section {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem
+}
+
+.projects-section {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem
+}
+
+.footer {
+  width: 80%;
+  margin: auto;
+  margin-top: 4rem;
+  text-align:center  
+}
+
+  /*
+
   
   .picture {
     width: 300px;
@@ -57,7 +89,7 @@ body {
     aspect-ratio: 1;
   }
   
-  /* shrink image on hover */
+  -- shrink image on hover 
   .picture:hover {
     filter: brightness(80%);
     transform: scale(0.97);
@@ -94,11 +126,6 @@ body {
     font-family: 'Montserrat', sans-serif;
   }
   
-  .page-container {
-    width: 80%;
-    margin: auto;
-    margin-top: 5rem
-  }
   
   .chunk-container {
     width: 80%;
@@ -111,10 +138,5 @@ body {
     margin-right: 1rem;
   }
   
-  .footer {
-    width: 80%;
-    font-family: monospace;
-    margin: auto;
-    margin-top: 4rem;
-    text-align:center  
-  }
+
+  */
