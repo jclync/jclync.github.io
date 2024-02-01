@@ -53,49 +53,55 @@ a {
   text-decoration: none;
 }
 
-/* Nav */
+/* Nav bar */
 nav {
-	left: 0%;
-	right: 0%;
-	background-color: white;
-	position: sticky;
-	/*
-  position: fixed;
-  top: -70px;
-  */
-	display: block;
-	transition: top 0.4s;
-	box-shadow: 2px 2px 5px #aaaaaa;
-	z-index: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-ul.nav-bar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden
+nav h1 {
+  color: var(--primary-color);
 }
 
-ul.nav-bar a {
-  float: right;
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
 }
 
-ul.nav-bar a.home-link {
-  float: left;
+nav ul {
+  display: flex;
+  gap: 1.9rem;
 }
 
-ul.nav-bar a.active {
-  color: #be3455;
-  text-decoration: underline
+nav ul li {
+  font-weight: var(--bold-font);
 }
 
-ul.nav-bar li a {
-  display: block;
-  color: #212121;
-  text-align: center;
-  padding: 24px;
-  text-decoration: none;
-  font-size: 1.2rem;
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+nav a.home-item {
+  font-weight: var(--bold-font);
+}
+
+nav a.home-item:hover {
+  color: #d3cbf5;
+  transition: 300ms ease-in-out;
+  transform-origin: 0% 50%;
 }
 
 ul.nav-bar li a.active:hover {
@@ -118,15 +124,6 @@ ul.nav-bar li a.active:hover {
     transform: scaleX(0);  
     transition: 350ms ease-in-out;
     transform-origin: 0% 50%;
-}
-
-.burger-menu {
-  color: var(--primary-color);
-  font-size: 2rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  display: none;
 }
 
 /* Hero */
@@ -215,6 +212,55 @@ footer {
   text-align: center;
   margin: 2rem 0 0;
 }
+
+/* Scroll Up */
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 80px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: flex;
+    float: right;
+  }
+
+  nav ul.show {
+    transform: translateX(0);
+  }
+}
+
+
 /*
 
 body {
