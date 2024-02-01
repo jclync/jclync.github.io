@@ -16,7 +16,6 @@
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
-/* Variables end */
 
 html {
   scroll-behavior: smooth;
@@ -54,12 +53,16 @@ a {
   text-decoration: none;
 }
 
+/* Nav */
 nav {
 	left: 0%;
 	right: 0%;
 	background-color: white;
-	position: fixed;
-	/*top: -70px;*/
+	position: sticky;
+	/*
+  position: fixed;
+  top: -70px;
+  */
 	display: block;
 	transition: top 0.4s;
 	box-shadow: 2px 2px 5px #aaaaaa;
@@ -126,6 +129,7 @@ ul.nav-bar li a.active:hover {
   display: none;
 }
 
+/* Hero */
 .hero {
   display: flex;
   align-items: center;
@@ -155,6 +159,62 @@ ul.nav-bar li a.active:hover {
   padding: 0.3rem 0;
 }
 
+/* Projects */
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
 /*
 
 body {
