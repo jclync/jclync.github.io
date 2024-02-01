@@ -54,12 +54,12 @@ a {
   text-decoration: none;
 }
 
-#nav {
+nav {
 	left: 0%;
 	right: 0%;
 	background-color: white;
 	position: fixed;
-	top: -70px;
+	/*top: -70px;*/
 	display: block;
 	transition: top 0.4s;
 	box-shadow: 2px 2px 5px #aaaaaa;
@@ -90,9 +90,9 @@ ul.nav-bar li a {
   display: block;
   color: #212121;
   text-align: center;
-  padding: 14px 16px;
+  padding: 24px;
   text-decoration: none;
-  font-size: 1.5rem
+  font-size: 1.2rem;
 }
 
 ul.nav-bar li a.active:hover {
@@ -124,6 +124,35 @@ ul.nav-bar li a.active:hover {
   background-color: transparent;
   cursor: pointer;
   display: none;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+
+.hero img {
+  height: 20rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
 }
 
 /*
