@@ -229,30 +229,27 @@ footer {
 /* Responsive Layout */
 @media screen and (max-width: 720px) {
   nav {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.5rem;
   }
 
   nav ul {
     position: fixed;
     background-color: var(--bg-color);
     flex-direction: column;
-    top: 80px;
-    left: 10%;
-    width: 80%;
+    top: 90px;
+    left: 0;
+    width: 100%;
     text-align: center;
     transform: translateX(120%);
     transition: transform 0.5s ease-in;
-    padding-left: 10rem;
-    padding-right: 10rem;
   }
 
   nav ul li {
-    margin: 8px;
+    margin: 2px 40%;
   }
 
   .burger-menu {
-    display: flex;
-    float: right;
+    display: block;
   }
 
   nav ul.show {
