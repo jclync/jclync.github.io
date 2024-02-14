@@ -14,11 +14,9 @@
         <nav>
             <a href=".." class="home-item">Jocelyn Chen</a>
             <ul class="nav-bar">
-                <li ><a class="active"></a></li>
-                <li ><a href="/about.html" class="nav-item active">About</a></li>
-                <li ><a href="#projects" class="nav-item">Projects</a></li>
+                <li ><a href=".." class="nav-item">Projects</a></li>
+                <li ><a href="./about.html" class="nav-item active">About</a></li>
                 <li ><a href="#contact" class="nav-item">Contact</a></li>
-                <li ><a class="active"></a></li>
             </ul>
             <button class="burger-menu" id="burger-menu">
             <ion-icon class="bars" name="menu-outline"></ion-icon>
@@ -27,27 +25,72 @@
 
         <!-- Hero Section -->
         <section class="hero" id="about">
-            <img
-                src="./assets/images/profile.jpg"
-                alt="Jocelyn wearing coral t-shirt sitting in front of the Eiffel Tower"
-                loading="lazy"
-                class="hero-img"
-            />
-            <div class="bio">
-                <h2 class="header">  hi there</h1>
-                <p class="intro-paragraph">
-                my name is Jocelyn Chen. I am a senior studying Human Centered Design & Engineering (HCDE) at UW.
-                <br /><br />
-                In my free time, you can find me:
-                <ul>
-                    <li>&#129483; trying out new boba places with my friends</li>
-                    <li>&#128105;&#127995;&#8205;&#127859; baking</li>
-                    <li>&#128247; documenting my food adventures</li>
-                    <li>&#128250; binge-watching kdramas and cdramas</li>
-                    <li>&#127926; listening to music</li>
-                </ul>
-                </p>
+            <h2 class="header">  Hi there, a little about me..</h2>
+            <div class="bio-container">
+                <img
+                    src="./assets/images/profile.jpg"
+                    alt="Jocelyn wearing coral t-shirt sitting in front of the Eiffel Tower"
+                    loading="lazy"
+                    class="hero-img"
+                />
+                <div class="bio">
+                    <p class="bio-paragraph">
+                        I first learned about design when I took a coding class in high school and learned how to use 
+                        Javascript to code an interactive minigame for my class project. With interests in the intersection 
+                        of design and technology, I began studying Human Centered Design & Engineering at the 
+                        University of Washington.
+                    </p>
+                    <p class="bio-paragraph">
+                        I am passionate about creating digital products that are inclusive and user-centric. As a designer, 
+                        I seek to make meaningful impacts in the lives of the people that use the products I create.
+                    </p>
+                    <button class="resume button">
+                        resume
+                    </button>
+                </div>
             </div>
+        </section>
+
+        <!-- More about me -->
+        <section class="hero" id="more">
+            <div class="grid-container">
+                <div>
+                    <h2>Quick Links</h2>
+                </div>  
+                <div>
+                    <ul class="bio-list">
+                        <li><a href="https://www.linkedin.com/in/jocelyn-chen-/" class="link">LinkedIn</a></li>
+                        <li><a href="mailto: jocelynchen1126@gmail.com" class="link">Email</a></li>
+                        <li><a href="https://github.com/jclync" class="link">Coding Projects</a></li>
+                        <li><a href="" class="link">Resume</a></li>
+                    </ul>
+                </div>  
+                <div>
+                    <h2>More about me!</h2>
+                </div>
+                <div class="bio-grid">
+                    <h3>I am..</h3>
+                    <ul class="bio-list">
+                        <li>a Taiwanese-American, in which I grew up with an appreciation for family time and lots of food during cultural celebrations</li>
+                        <li>an avid baker</li>
+                        <li>a foodie, always looking up new food places to try</li>
+                        <li>a creative, catch me doodling, knitting, or using the occasional needle and thread</li>
+                        <li>a tinker, I enjoy fiddling with physical prototyping and coding projects</li>
+                        <li>a puzzler, I love logic puzzles and playing the NYT games</li>
+                    </ul>
+                    <h3>Outside of design, you can find me..</h3>
+                    <ul class="bio-list">
+                        <li>trying out new boba places with my friends</li>
+                        <li>baking</li>
+                        <li>documenting my foodie adventures</li>
+                        <li>watching Chinese and Korean dramas</li>
+                        <li>listening to music</li>
+                        <li>taking walks</li>
+                    </ul>
+                </div>  
+            </div>
+
+
         </section>
 
         <!-- Scroll to top -->
