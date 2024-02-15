@@ -38,8 +38,7 @@ a {
 }
 
 h2 {
-  text-decoration: 3.5px underline #d3cbf5;
-  text-underline-offset: 5px;
+  color: #d3cbf5;
 }
 
 body {
@@ -187,9 +186,9 @@ ul.nav-bar li a.active:hover {
 /* Projects */
 .projects {
   background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: 2rem;
-  max-width: 70rem;
+  padding: 7rem 15%;
+  margin-top: 3rem;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -201,20 +200,59 @@ ul.nav-bar li a.active:hover {
 }
 
 .project-img {
-  width: 250px;
+  width: 400px;
+  height: 400px;
   border-radius: 2rem;
 }
 
-.project-type {
-  font-weight: var(--bold-font);
+.project-info {
+  max-width: 55%;
+  padding: 5.5rem 0;
 }
 
+/* underline hover left to right reference from: 
+https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
+*/ 
 .project-sponsor {
-  font-weight: var(--bolder-font);
+  text-decoration: none;
+  position: relative;
+  width: fit-content;
+  block-size: fit-content; 
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-sponsor::before, .project-sponsor::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  border-top-width: 3.5px;
+  border-top-color: #d3cbf5;
+} 
+
+.project-sponsor::before {
+  width: 100%;
+}
+
+.project-sponsor::after {
+  border-top-style: solid;
+  width: 0;
+  transition: width .2s ease;
+}
+
+.project-sponsor:hover::after {
+  width: 100%;
+  transition: 0.5s; 
 }
 
 .project-type {
+  margin-bottom: var(--bottom-margin-2);
   line-height: var(--line-height);
+}
+
+.project-paragraph {
+  line-height: var(--line-height);
+  margin-bottom: 2.5rem;
 }
 
 button {
