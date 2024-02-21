@@ -31,55 +31,56 @@ navLink.forEach((link) =>
 
 // typing carousel effect
 // source: https://codepen.io/josephwong2004/pen/ExgoKde?editors=1010
-const carouselText = [
-  {text: "Apple", color: "red"},
-  {text: "Orange", color: "orange"},
-  {text: "Lemon", color: "yellow"}
-]
+// source: https://codepen.io/gschier/pen/DLmXKJ
+var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
 
-$( document ).ready(async function() {
-  carousel(carouselText, "#feature-text")
-});
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
 
-async function typeSentence(sentence, eleRef, delay = 100) {
-  const letters = sentence.split("");
-  let i = 0;
-  while(i < letters.length) {
-    await waitForMs(delay);
-    $(eleRef).append(letters[i]);
-    i++
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
-  return;
-}
 
-async function deleteSentence(eleRef) {
-  const sentence = $(eleRef).html();
-  const letters = sentence.split("");
-  let i = 0;
-  while(letters.length > 0) {
-    await waitForMs(100);
-    letters.pop();
-    $(eleRef).html(letters.join(""));
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  //var delta = 300 - Math.random() * 100;
+  var delta = 150; //speed
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
   }
-}
 
-async function carousel(carouselList, eleRef) {
-    var i = 0;
-    while(true) {
-      updateFontColor(eleRef, carouselList[i].color)
-      await typeSentence(carouselList[i].text, eleRef);
-      await waitForMs(1500);
-      await deleteSentence(eleRef);
-      await waitForMs(500);
-      i++
-      if(i >= carouselList.length) {i = 0;}
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
     }
-}
-
-function updateFontColor(eleRef, color) {
-  $(eleRef).css('color', color);
-}
-
-function waitForMs(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms))
-}
+  }
+};

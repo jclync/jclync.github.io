@@ -170,13 +170,19 @@ ul.nav-bar li a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
 }
+  
+.txt-rotate {
+  margin-left: 4px;
+}
+
 .input-cursor {
   display: inline-block;
   width: 2px;
-  height: 42px;
-  background-color: white;
-  margin-left: 8px;
+  background-color: #2a2d34;
+  height: 20px;
+  margin-left: 2px;
   animation: blink .6s linear infinite alternate;
 }
 
@@ -187,11 +193,11 @@ ul.nav-bar li a:hover::after {
   100% {opacity: 0;}
 }
 
-.input-cursor { 
-animation: blink .6s linear infinite alternate;
-}
-
 .bio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 45%;
   padding: 0rem 3rem;
 }
