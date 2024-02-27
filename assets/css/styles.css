@@ -38,9 +38,24 @@ a {
   color: var(--primary-color);
 }
 
-h2 {
+h1 {
+  font-size: 50px;
   color: #d3cbf5;
   margin-bottom: var(--bottom-margin-2);
+}
+
+h2 {
+  font-size: 40px;
+  color: #d3cbf5;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+h3 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 1em;
 }
 
 body {
@@ -106,7 +121,7 @@ nav a.home-item:hover {
 
 ul.nav-bar li a.active {
   color: #d3cbf5;  
-  border-bottom: solid 3px #d3cbf5;  
+  /* border-bottom: solid 3px #d3cbf5;  */
 }
 
 /* 
@@ -147,10 +162,12 @@ ul.nav-bar li a:hover::after {
 
 /* Hero */
 .hero {
-  max-width: 70rem;
-  margin-top: 5rem;
+  max-width: 70%;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  margin-bottom: 3rem;
 }
 
 .hero-container {
@@ -193,27 +210,38 @@ ul.nav-bar li a:hover::after {
   100% {opacity: 0;}
 }
 
-.bio {
+.home-bio {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 45%;
+  width: 55%;
+  padding: 0rem 3rem;
+}
+
+.bio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
   padding: 0rem 3rem;
 }
 
 .bio-container {
   display: flex;
   padding: 2rem 0rem;
+  gap: 2rem;
 }
 
+/*
 .hero h1 {
   margin-bottom: var(--bottom-margin);
 }
 
 .hero h2 {
   margin-bottom: var(--bottom-margin-2);
-}
+}*/
 
 .bio p {
   line-height: var(--line-height);
@@ -228,7 +256,8 @@ button {
   border-radius: 2rem;
   padding: 8px 32px;
   cursor: pointer;
-  font-size: 16;
+  font-size: 16px;
+  max-width:15em;
 }
 
 button:hover {
@@ -241,9 +270,27 @@ button:hover {
   display: grid;
   gap: 10px;
   max-width: 70rem;
+  grid-template-columns: 36.5% 55%;
+  /*
+  max-width: 70%;
+  grid-template-columns: 22rem 39rem;*/
+  align-items: baseline;
+}
+
+/*
+.about-container {
+  display: flex;
+  gap: 13rem;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  max-width: 70rem;
   grid-template-columns: 20rem 45rem;
   align-items: baseline;
 }
+*/
 
 .bio-list {
   margin-bottom: 5rem;
@@ -268,8 +315,8 @@ button:hover {
   font-size: x-large;
   justify-content: center;
   width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 
 .scroll-down:hover {
@@ -290,6 +337,7 @@ button:hover {
   display: flex;
   padding: 2rem 0rem;
   gap: 5rem;
+  margin-top: 3rem;
 }
 
 .project-img {
@@ -300,7 +348,9 @@ button:hover {
 
 .project-info {
   max-width: 55%;
-  padding: 5.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /* 
@@ -308,11 +358,12 @@ button:hover {
    source: https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
 */ 
 .project-title {
+  font-size: 50px;
+  color: #2a2d34;
   text-decoration: none;
   position: relative;
   width: fit-content;
   block-size: fit-content; 
-  margin-bottom: var(--bottom-margin-3);
 }
 
 .project-title::before, .project-title::after {
@@ -320,7 +371,7 @@ button:hover {
   position: absolute;
   bottom: -3px;
   left: 0;
-  border-top-width: 3.5px;
+  border-top-width: 5px;
   border-top-color: #d3cbf5;
 } 
 
@@ -340,26 +391,25 @@ button:hover {
 }
 
 .project-sponsor {
-  margin-bottom: var(--bottom-margin-2);
   line-height: var(--line-height);
 }
 
 .project-paragraph {
   line-height: var(--line-height);
-  margin-bottom: 2.5rem;
 }
 
-button {
+button .button{
   border: 1px solid #b3b3b3;
   background-color: var(--bg-color);
   color: #a786db;
   border-radius: 2rem;
   padding: 8px 32px;
   cursor: pointer;
-  font-size: 16;
+  font-size: 16px;
+  max-width:20em;
 }
 
-button:hover {
+button .button:hover {
   border: 1px solid #d3cbf5;
   background-color: #d3cbf5;
   transition: 0.4s;
@@ -416,6 +466,94 @@ button:hover {
 
 */
 
+/* Password */
+div.password-protected-content h2 {
+  color: #2a2d34;
+}
+
+h1.password-protect:hover {
+  cursor: pointer;
+}
+
+.password {
+  max-width: 70%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* align-items: center; */
+  /* max-width: 70rem; */
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  height: 60%;
+}
+
+.password-prompt {
+  margin-bottom: 3rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 2rem;
+}
+
+input {
+  border:none;
+  border-bottom: 2px solid #a786db;
+  font-size:20px;
+  padding: 12px;
+  background-color: #fcfcfc;
+}
+
+/* 
+Overlay from w3 Schools
+Source: https://www.w3schools.com/howto/howto_css_overlay.asp
+*/
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fcfcfc; /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  align-items:center;
+}
+
+.close-overlay {
+  position: fixed;
+  right: 4%;
+  top: 5%;
+  cursor: pointer;
+  font-size: x-large;
+  z-index: 2;
+}
+
+i.close-overlay:hover {
+  color: #8b8eaf;
+}
+
+/* Design Philosophy */
+.design-philosophy {
+  max-width: 70%;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 /* Footer */
 footer {
   background-color: var(--bg-color);
@@ -423,6 +561,11 @@ footer {
   bottom: 0;
   text-align: center;
   margin: 2rem 0 0;
+}
+
+footer .copy {
+  color:#b3b3b3;
+  margin: auto;
 }
 
 footer .footer-icon {
@@ -435,7 +578,7 @@ footer .footer-icon:hover {
 
 footer .footer-links {
   margin: auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 /* Scroll Up */
@@ -450,6 +593,16 @@ footer .footer-links {
 i.scroll-up:hover {
   color: #8b8eaf;
 }
+
+/* Case Studies */
+.project-context {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 15rem;
+}
+
 
 /* Responsive Layout */
 @media screen and (max-width: 720px) {
@@ -487,8 +640,6 @@ i.scroll-up:hover {
     right: 2%;
   }
 }
-
-
 
 
 

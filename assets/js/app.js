@@ -29,9 +29,11 @@ navLink.forEach((link) =>
   })
 );
 
-// typing carousel effect
-// source: https://codepen.io/josephwong2004/pen/ExgoKde?editors=1010
-// source: https://codepen.io/gschier/pen/DLmXKJ
+/*
+typing carousel effect
+source: https://codepen.io/josephwong2004/pen/ExgoKde?editors=1010
+source: https://codepen.io/gschier/pen/DLmXKJ
+*/
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -84,3 +86,41 @@ window.onload = function() {
     }
   }
 };
+
+// password protected case study
+const passwordButton = document.getElementById("submit-button");
+passwordButton.addEventListener("click", () => {
+  if (document.querySelector("input[type=password]").value=="JChen123!") {
+    location.href="./robert-half-digital-modernization.html"
+  } else {
+    alert("Incorrect password. Please try again.")
+  }
+});
+
+// overlay
+const password = document.getElementById("password-protect");
+password.addEventListener("click", () => {
+  document.getElementById("overlay").style.display = "block";
+});
+
+const projectTitle = document.getElementById("password-protect-title")
+projectTitle.addEventListener("click", () => {
+  document.getElementById("overlay").style.display = "block";
+});
+
+const close = document.getElementById("close-overlay");
+close.addEventListener("click", () => {
+  document.getElementById("overlay").style.display = "none";
+});
+
+/* 
+trigger button click on enter
+source: https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+*/
+const passInput = document.getElementById("password-input");
+passInput.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("submit-button").click();
+  }
+});

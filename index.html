@@ -14,9 +14,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
         <title>Home | Jocelyn Chen's Portfolio</title>
-  </head>
-
-  <body>
+    </head>
+    <body>
         <!-- Navbar 
         <nav>
             <ul class="nav-bar">
@@ -53,7 +52,7 @@
                     class="hero-img"
                 />
                 <!-- animate__animated animate__shakeX -->
-                <div class="bio">
+                <div class="home-bio">
                     <h2 class="bio-title">Jocelyn Chen</h2>
                     <!-- typed bio -->
                     <div class="typing-container">
@@ -62,10 +61,10 @@
                             data-period="2000"
                             data-rotate='[
                                 "Hello!", 
-                                "My name is Jocelyn Chen.", 
+                                "My name is Jocelyn.", 
                                 "I am a Seattle-based designer.", 
                                 "I recently graduated from the University of Washington", 
-                                "Take a look around!" 
+                                "Take a look around and get to know me!" 
                                 ]'>
                         </span>
                         <span class="input-cursor"></span>
@@ -79,7 +78,7 @@
 
         <!-- Projects section -->
         <section class="projects" id="projects">
-            <h2 class="projects-title">Projects</h2>
+            <h2 class="projects-title">Selected Work &darr;</h2>
             <div class="project-container">
                 <img
                     src="./assets/images/profile.jpg"
@@ -91,7 +90,7 @@
                     <p class="project-sponsor">
                         UW CERSE / Sponsored Senior Capstone
                     </p>
-                    <a href="" target="" class="project-link">
+                    <a href="./uw-cerse-stem-equity-resource-hub.html" target="_self" class="project-link">
                         <h1 class="project-title">STEM Equity Resource Hub</h1>
                     </a>
                     <p class="project-paragraph">
@@ -99,25 +98,21 @@
                         leveraging research insights to frame design decisions.
                     </p>
                     <a href="./uw-cerse-stem-equity-resource-hub.html" target="_self" class="project-link">
-                        <button class="project button">Read Case Study &rarr; &#10142;</button>
+                        <button class="project button">Read Case Study &#10142;</button>
                     </a>
                 </div>
             </div>
             <div class="project-container">
                 <div class="project-info">
                     <p class="project-sponsor">
-                        ROBERT HALF / SUMMER INTERNSHIP
+                        Robert Half / Summer Internship
                     </p>
-                    <a href="" target="" class="project-link">
-                        <h1 class="project-title">Digital Service Products Modernization</h1>
-                    </a>
+                    <h1 class="password-protect project-title" id="password-protect-title">Digital Service Products Modernization</h1>
                     <p class="project-paragraph">
                         Collaborated with a cross-functional team to reinvent and modernize existing client and candidate digital service products,
                         optimizing the user experience and accelerating business value objectives.
                     </p>
-                    <a href="./robert-half-digital-modernization.html" target="_self" class="project-link">
-                        <button class="project button">Password Protected &rarr; &#10142;</button>
-                    </a>
+                    <button class="password-protect project button" id="password-protect">Password Protected &#10142;</button>
                 </div>
                 <img
                 src="./assets/images/profile.jpg"
@@ -137,14 +132,14 @@
                     <p class="project-sponsor">
                         University of Washington HCDE 318 / Mobile App Design
                     </p>
-                    <a href="./husky-buddy.html" target="" class="project-link">
+                    <a href="./husky-buddy.html" target="_self" class="project-link">
                         <h1 class="project-title">Husky Buddy: Creating Student Connections</h1>
                     </a>
                     <p class="project-paragraph">
-                        Designed a mobile app to connect students and increase engagement during online learning.
+                        Designed a mobile app to connect students and encourage increase engagement during online learning.
                     </p>
-                    <a href="#" target="_self" class="project-link">
-                        <button class="project button">Read Case Study &rarr; &#10142;</button>
+                    <a href="./husky-buddy.html" target="_self" class="project-link">
+                        <button class="project button">Read Case Study &#10142;</button>
                     </a>
                 </div>
             </div>
@@ -166,6 +161,19 @@
             </div>
         </section>
 
+        <!-- Password Protected Content Overlay -->
+        <div class="password-protected-content" id="overlay">
+            <div class="password-form">
+                <i class="close-overlay" id="close-overlay">
+                    <i class="fa-solid fa-x fa-xl"></i>   
+                </i>
+                <h2>Password Protected Case Study</h2>
+                <p class="password-prompt">Please enter the password below.<br>&#40;contact me or check my submitted resume&#41;</p>
+                <input type="password" placeholder="Password" id="password-input" style="margin-bottom:1rem">
+                <button class="submit-button" id="submit-button">Submit</button>
+            </div>
+        </div>
+
         <!-- Contact section -->
         <section class="contact-me">
 
@@ -186,6 +194,7 @@
                     <i class="fa-regular fa-envelope fa-2xl"></i>
                 </a>
             </div>
+            <p class="copy">beep boop beep by Jocelyn</p>
             <p class="copy">&copy; 2024 Jocelyn Chen</p>
         </footer>
 
