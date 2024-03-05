@@ -34,7 +34,7 @@
             <a href=".." class="home-item">Jocelyn Chen</a>
             <ul class="nav-bar">
                 <li ><a href="#projects" class="nav-item">Projects</a></li>
-                <li ><a href="./about.html" class="nav-item">About</a></li>
+                <li ><a href="/about/" class="nav-item">About</a></li>
                 <li ><a href="#contact" class="nav-item">Contact</a></li>
             </ul>
             <button class="burger-menu" id="burger-menu">
@@ -43,68 +43,70 @@
         </nav>
         
         <!-- Hero Section -->
-        <section class="hero" id="about">
-            <div class="hero-container">
-                <img
+        <section class="hero home-page" id="about">
+            <div class="hero-container home-page">
+                <div class="hero-container hello">
+                    <img
                     src="./assets/images/profile.jpg"
                     alt="jocelyn-chen"
                     loading="lazy"
                     class="hero-img"
-                />
-                <!-- animate__animated animate__shakeX -->
-                <div class="home-bio">
-                    <h2 class="bio-title">Jocelyn Chen</h2>
-                    <!-- typed bio -->
-                    <div class="typing-container">
-                        <span
-                            class="txt-rotate"
-                            data-period="2000"
-                            data-rotate='[
-                                "Hello!", 
-                                "My name is Jocelyn.", 
-                                "I am a Seattle-based designer.", 
-                                "I recently graduated from the University of Washington", 
-                                "Take a look around and get to know me!" 
-                                ]'>
-                        </span>
-                        <span class="input-cursor"></span>
-                    </div>
+                    />
+                    <!-- animate__animated animate__shakeX -->
+                    <div class="home-bio">
+                        <h1 class="bio-title">Jocelyn Chen</h1>
+                        <!-- typed bio -->
+                        <div class="typing-container">
+                            <span
+                                class="txt-rotate"
+                                data-period="2000"
+                                data-rotate='[
+                                    "Hello!", 
+                                    "My name is Jocelyn.", 
+                                    "I am a Seattle-based designer.", 
+                                    "I recently graduated from the University of Washington", 
+                                    "Take a look around and get to know me!" 
+                                    ]'>
+                            </span>
+                            <span class="input-cursor"></span>
+                        </div>
+                    </div>                   
                 </div>
+                <a href="#projects" class="scroll-down animate__animated animate__shakeY">
+                    <i class="fa-solid fa-chevron-down fa-2xl"></i>
+                </a>
             </div>
-            <a href="#projects" class="scroll-down animate__animated animate__shakeY">
-                <i class="fa-solid fa-chevron-down fa-2xl"></i>
-            </a>
         </section>
 
         <!-- Projects section -->
         <section class="projects" id="projects">
-            <h2 class="projects-title">Selected Work &darr;</h2>
+            <h1 class="projects-title">Selected Work &darr;</h1>
             <div class="project-container">
-                <img
-                    src="./assets/images/profile.jpg"
-                    alt=""
-                    loading="lazy"
-                    class="project-img"
-                />
+                <a href="/uw-cerse-stem-equity-resource-hub/" target="_self" class="project-link">
+                    <img
+                        src="./assets/images/profile.jpg"
+                        alt=""
+                        loading="lazy"
+                        class="project-img"
+                    />
+                </a>
                 <div class="project-info">
-                    <p class="project-sponsor">
+                    <p class="project-sponsor secondary">
                         UW CERSE / Sponsored Senior Capstone
                     </p>
-                    <a href="./uw-cerse-stem-equity-resource-hub.html" target="_self" class="project-link">
-                        <h1 class="project-title">STEM Equity Resource Hub</h1>
-                    </a>
+                    <h1 class="project-title">STEM Equity Resource Hub</h1>
                     <p class="project-paragraph">
                         Worked with a research team on building a STEM resource hub for university students, 
                         leveraging research insights to frame design decisions.
                     </p>
-                    <a href="./uw-cerse-stem-equity-resource-hub.html" target="_self" class="project-link">
+                    <a href="/uw-cerse-stem-equity-resource-hub/" target="_self" class="project-link">
                         <button class="project button">Read Case Study &#10142;</button>
                     </a>
                 </div>
             </div>
             <div class="project-container">
                 <div class="project-info">
-                    <p class="project-sponsor">
+                    <p class="project-sponsor secondary">
                         Robert Half / Summer Internship
                     </p>
                     <h1 class="password-protect project-title" id="password-protect-title">Digital Service Products Modernization</h1>
@@ -114,31 +116,33 @@
                     </p>
                     <button class="password-protect project button" id="password-protect">Password Protected &#10142;</button>
                 </div>
-                <img
-                src="./assets/images/profile.jpg"
-                alt=""
-                loading="lazy"
-                class="project-img"
-                />
-            </div>
-            <div class="project-container">
-                <img
+                <a href="/robert-half-digital-modernization/" target="_self" class="project-link">
+                    <img
                     src="./assets/images/profile.jpg"
                     alt=""
                     loading="lazy"
                     class="project-img"
-                />
+                    />
+                </a>
+            </div>
+            <div class="project-container">
+                <a href="/husky-buddy/" target="_self" class="project-link">
+                    <img
+                        src="./assets/images/profile.jpg"
+                        alt=""
+                        loading="lazy"
+                        class="project-img"
+                    />
+                </a>    
                 <div class="project-info">
-                    <p class="project-sponsor">
+                    <p class="project-sponsor secondary">
                         University of Washington HCDE 318 / Mobile App Design
                     </p>
-                    <a href="./husky-buddy.html" target="_self" class="project-link">
-                        <h1 class="project-title">Husky Buddy: Creating Student Connections</h1>
-                    </a>
+                    <h1 class="project-title">Husky Buddy: Creating Student Connections</h1>
                     <p class="project-paragraph">
                         Designed a mobile app to connect students and encourage increase engagement during online learning.
                     </p>
-                    <a href="./husky-buddy.html" target="_self" class="project-link">
+                    <a href="/husky-buddy/" target="_self" class="project-link">
                         <button class="project button">Read Case Study &#10142;</button>
                     </a>
                 </div>
@@ -148,7 +152,7 @@
         <!-- Design Philosophy Section -->
         <section class="design-philosophy" id="about">
             <div class="dp-container">
-                <h2>my design philosophy</h2>>
+                <h1>my design philosophy</h1>
                 <!-- animate__animated animate__shakeX -->
                 <div class="dp">
                     <p class="dp-text">
@@ -167,7 +171,7 @@
                 <i class="close-overlay" id="close-overlay">
                     <i class="fa-solid fa-x fa-xl"></i>   
                 </i>
-                <h2>Password Protected Case Study</h2>
+                <h1>Password Protected Case Study</h1>
                 <p class="password-prompt">Please enter the password below.<br>&#40;contact me or check my submitted resume&#41;</p>
                 <input type="password" placeholder="Password" id="password-input" style="margin-bottom:1rem">
                 <button class="submit-button" id="submit-button">Submit</button>
@@ -194,8 +198,8 @@
                     <i class="fa-regular fa-envelope fa-2xl"></i>
                 </a>
             </div>
-            <p class="copy">beep boop beep by Jocelyn</p>
-            <p class="copy">&copy; 2024 Jocelyn Chen</p>
+            <p class="secondary footer-copy">beep boop beep by Jocelyn</p>
+            <p class="secondary footer-copy">&copy; 2024 Jocelyn Chen</p>
         </footer>
 
         <!-- Website scripts -->

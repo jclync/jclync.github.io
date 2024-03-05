@@ -87,6 +87,8 @@ window.onload = function() {
   }
 };
 
+/*
+
 // password protected case study
 const passwordButton = document.getElementById("submit-button");
 passwordButton.addEventListener("click", () => {
@@ -112,15 +114,20 @@ const close = document.getElementById("close-overlay");
 close.addEventListener("click", () => {
   document.getElementById("overlay").style.display = "none";
 });
+*/
 
 /* 
 trigger button click on enter
 source: https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
-*/
+*/ /*
 const passInput = document.getElementById("password-input");
 passInput.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("submit-button").click();
   }
-});
+});*/
+
+/* encrypted html page
+source: https://github.com/robinmoisson/staticrypt
+*/
