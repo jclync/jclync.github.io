@@ -87,6 +87,28 @@ window.onload = function() {
   }
 };
 
+
+// Slider
+const container = document.querySelector('.container');
+
+document.querySelector('.slider').addEventListener('input', (e) => {
+  container.style.setProperty('--position', `${e.target.value}%`);
+})
+
+
+// Slider 2
+const container2 = document.querySelector('.container-2');
+
+document.querySelector('.slider-2').addEventListener('input', (e) => {
+  container2.style.setProperty('--position', `${e.target.value}%`);
+})
+
+// Slider 3
+const container3 = document.querySelector('.container-3');
+
+document.querySelector('.slider-3').addEventListener('input', (e) => {
+  container3.style.setProperty('--position', `${e.target.value}%`);
+})
 /*
 
 // password protected case study

@@ -19,7 +19,10 @@
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --bottom-margin-3: 2rem;
-  --line-height: 1.7rem;
+  --div-margin: 5rem auto 4rem;
+  --img-margin: 2rem auto;
+  --section-margin: 6rem auto;
+  --line-height: 1.7;
   --transition: 0.3s;
 }
 
@@ -48,18 +51,22 @@ h1 {
   color: #d3cbf5;
   margin-bottom: var(--bottom-margin-2);
   font-family: var(--headline-font-family);
+  font-weight: var(--bold-font);
 }
 
 h2 {
   font-size: 40px;
-  margin-bottom: var(--bottom-margin-2);
+  margin-bottom: var(--bottom-margin-3);
   font-family: var(--headline-font-family);
+  margin-top: 10px;
+  font-weight: var(--bold-font);
 }
 
 h3 {
   font-size: 26px;
   font-family: var(--headline-font-family);
   margin-bottom: var(--bottom-margin-2);
+  font-weight: var(--bold-font);
 }
 
 p {
@@ -73,14 +80,35 @@ h3.secondary {
   margin-bottom: var(--bottom-margin-3);
 } 
 
+p.subheader {
+  font-weight: var(--bold-font);
+  font-size: 1.2em;
+}
+
 p.secondary {
   font-family: var(--secondary-font-family);
   color:#b3b3b3;
-  margin-bottom: var(--bottom-margin);
+  margin-bottom: var(--bottom-margin-2);
+  line-height:normal;
+  font-size: 1.2em;
+}
+
+a.secondary {
+  font-family: var(--secondary-font-family);
 }
 
 span.markup {
   background-color: #F5EFFF;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #d3cbf5;
+  text-decoration: underline;
+  transition: 0.2s;
 }
 
 body {
@@ -97,6 +125,10 @@ ul {
 }
 
 a {
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: none;
 }
 
@@ -189,7 +221,7 @@ ul.nav-bar li a:hover::after {
 /* --------------------------------------------- HERO -----------------------------------------------------------------------------*/
 .hero {
   max-width: 70%;
-  margin: 3rem auto;
+  margin: var(--div-margin);
   width: 100%;
 }
 
@@ -339,7 +371,7 @@ button:hover {
 }
 
 .bio-list a.link {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   margin-bottom: var(--bottom-margin);
 }
 
@@ -348,7 +380,7 @@ button:hover {
   font-size: x-large;
   justify-content: center;
   width: 100%;
-  margin: 3rem auto;
+  margin: var(--div-margin);
   padding-top: 3rem;
   padding-bottom: 5rem;
 }
@@ -360,7 +392,7 @@ button:hover {
 /* --------------------------------------------- PROJECTS --------------------------------------------------------------------*/
 .projects {
   background-color: var(--bg-color);
-  margin: 3rem auto;
+  margin: var(--div-margin);
   width: 100%;
   padding: 7rem 15% 3rem;
 }
@@ -369,7 +401,7 @@ button:hover {
   display: flex;
   padding: 2rem 0rem;
   gap: 5rem;
-  margin: 3rem auto;
+  margin: var(--div-margin);
 }
 
 .project-img {
@@ -588,7 +620,7 @@ i.close-overlay:hover {
 /* --------------------------------------------- DESIGN PHILOSOPHY --------------------------------------------------------------------*/
 .design-philosophy {
   max-width: 70%;
-  margin: 3rem auto;
+  margin: var(--div-margin);
   width: 100%;
 }
 
@@ -619,6 +651,10 @@ footer .footer-links {
   padding: 2rem;
 }
 
+footer p.secondary {
+  font-size: 1em;
+}
+
 /* Scroll Up */
 .scroll-up {
   position: fixed;
@@ -634,18 +670,34 @@ i.scroll-up:hover {
 
 /* --------------------------------------------- CASE STUDIES --------------------------------------------------------------------*/
 /* -- UW CERSE -- */
-/* overview section */
-.overview {
+/* project image section */
+.project-image-section {
   max-width: 70%;
-  margin: 3rem auto 1.5rem;
+  margin: 1rem auto 6rem;
+  width: 100%;
+}
+
+/* overview section */
+.overview-section {
+  margin: var(--section-margin);
+  width: 100%;
+  padding: 3rem 15%;
+  background-color: var(--bg-color); 
+}
+
+/* impact section */
+.impact-section {
+  max-width: 70%;
+  margin: var(--section-margin);
   width: 100%;
 }
 
 .project-context-container {
-  margin: 3rem auto;
   display: flex;
-  /* padding: 0 2rem; */
-  /* gap: 15rem; */
+}
+
+.project-context-container ul li {
+  line-height: var(--line-height);
 }
 
 .project-context {
@@ -660,43 +712,48 @@ h1.case-study-title {
 }
 
 .project-overview {
+  margin: var(--div-margin);
+} 
+
+.project-image {
+  max-width: 100vw;
+}
+
+.project-overview-container {
   display: flex;
   gap: 5em;
-  margin: 3rem auto;
-  align-items: center;
 }
 
 .lsamp-image {
-  border-radius: 7px;
+  border-radius: 2ch;
 }
 
 p.image-caption {
   color: #b3b3b3;
   font-style:italic;
   font-weight: 300;
-  font-size: smaller;
+  font-size: 13px;
   line-height: normal;
   text-align: center;
-}
-
-.design-question {
-  margin: 3rem auto;
 }
 
 .design-q {
   font-size: 26px;
   line-height:1.7em;
-}
-
-.final-deliverable {
-  margin: 3rem auto;
+  border-left: 3px solid #b3b3b3;
+  padding-left: 2rem; 
 }
 
 .deliverable-container {
-  display: grid;
+  /* display: grid;
   gap: 4.5rem;
-  /* max-width: 70rem; */
   grid-template-columns: 45% 45%;
+  margin: 0rem auto 3rem;
+  align-items: center; */
+  display: grid;
+  gap: 12.5rem;
+  /* max-width: 70rem; */
+  grid-template-columns: 40% 45%;
   margin: 0rem auto 3rem;
   align-items: center;
 }
@@ -707,13 +764,13 @@ p.image-caption {
   align-items: center;
 }
 
-iframe {
+iframe.product-video {
   border: none;
 }
 
 /* discovery section */
-.discovery {
-  margin: 1.5rem auto 3rem;
+.discovery-section {
+  margin: var(--section-margin);
   width: 100%;
   padding: 3rem 15%;
   background-color: var(--bg-color); 
@@ -730,15 +787,15 @@ iframe {
 }
 
 .two-column {
-  margin: 3rem auto;
+  margin: var(--div-margin);
   display: flex;
   gap: 5rem;
 }
 
 .no-bottom-margin {
-  margin: 3rem auto 0rem;
+  /* margin: 3rem auto 0rem;
   display: flex;
-  gap: 5rem;
+  gap: 5rem; */
   border-bottom: none;
 }
 
@@ -750,7 +807,7 @@ iframe {
 
 .two-img-container {
   display: flex;
-  margin: 3rem auto;
+  margin: var(--div-margin);
   justify-content: space-evenly;
 }
 
@@ -792,7 +849,7 @@ Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image
 }
 
 .flip-image-back {
-  padding: 2rem;
+  padding: 3rem;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -806,8 +863,8 @@ Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image
 } */
 
 .flip-image-back {
-  background-color: #555;
-  color: white;
+  background-color: #e6eaec;
+  color: #2a2d34;
   transform: rotateY(180deg);
   border-radius: 2ch;
   width: 500px;
@@ -822,7 +879,7 @@ Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image
 .interview-image {
   width: auto;
   height: 400px;
-  border-radius: 1ch;
+  border-radius: 2ch;
 }
 
 div.column {
@@ -835,9 +892,9 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
 .bento-box {
   display: grid;
   gap: 2ch;
-  margin: 3rem auto;
+  margin: var(--div-margin);
   & > * {
-    background: var(--bg, #f7f6f6);
+    background: var(--bg, #e6eaec);
     border-radius: 2ch;
     color: hsl(215, 75%, 10%);
     container-type: inline-size;
@@ -884,11 +941,11 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
 }
 
 div.div {
-  margin: 3rem auto;
+  margin: var(--div-margin);
 }
 
 .competitive-analysis-container {
-  margin: 3rem auto;
+  margin: var(--div-margin);
   display: flex;
   justify-content: center;
 }
@@ -896,12 +953,49 @@ div.div {
 .competitive-analysis-image {
   width: 600px;
   height: auto;
-  border-radius: 7%;
+  border-radius: 2ch;
 }
 
 .comp-analysis {
   width: 600px;
   height: 425px;
+}
+
+/* ideation section */
+.carousel.slide {
+  margin: var(--div-margin);
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 70%;
+  /* margin: var(--div-margin); */
+  margin: auto;
+}
+
+/* .carousel-caption {
+  color: #2a2d34;
+} */
+
+.carousel-control {
+  color: #2a2d34;
+  /* opacity: 0; */
+}
+
+.carousel-control:focus, .carousel-control:hover {
+  color: #2a2d34;
+}
+
+.carousel-indicators .active {
+  background-color: #2a2d34;
+}
+
+.carousel-indicators li {
+  border: 1px solid #2a2d34;
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
 }
 
 /* responsive bento box */
@@ -915,23 +1009,24 @@ div.div {
   .bento-hamburger {height: 370px}
   .hotdog {width: 340px;}
   .hamburger {width: 470px;} */
+  }
 
   /* .deliverable-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   } */
-}
+
 
 /* findings section */
-.findings {
+.findings-section {
   max-width: 70%;
-  margin: 3rem auto;
+  margin: var(--section-margin);
   width: 100%;
 }
 
 .findings-recommendations-grid {
-  margin: 3rem auto;
+  margin: var(--div-margin);
 }
 
 .findings-container, .recommendations-container {
@@ -945,6 +1040,12 @@ div.div {
   gap: 5rem;
 }
 
+.border-top {
+  margin-top: 6rem;
+  border-top: 2px dotted #d3cbf5;
+  padding: 3rem 0 0;
+}
+
 .no-bottom-border {
   border-bottom: none;
   /* padding-bottom: 0; */
@@ -952,29 +1053,183 @@ div.div {
 }
 
 /* ideation section */
-.ideation {
+.ideation-section {
   max-width: 70%;
-  margin: 3rem auto;
+  margin: var(--section-margin);
   width: 100%;
+}
+
+ul.list {
+  list-style-type: disc;
+  margin: 0 4rem;
+}
+
+ol.list {
+  margin: 0 2rem;
+}
+
+ul.list li, ol.list li {
+  line-height: var(--line-height);
+}
+
+.brainstorm-image {
+  width: 600px;
+  max-width: 70vw;
+  border-radius: 2ch;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-margin {
+  margin: var(--img-margin);
 }
 
 /* iteration section */
-.iteration {
+.iteration-section {
   max-width: 70%;
-  margin: 3rem auto;
+  margin: var(--section-margin);
   width: 100%;
+}
+
+.usability-test {
+  padding-left: 2rem;
+}
+
+.usability-test-image {
+  height: 70vh;
+  width: auto;
+  max-height: 70vh;
+  border-radius: 2ch;
+}
+
+.prototype-screen-image {
+  width: 100%;
+}
+
+/* slider 
+  Source: https://www.youtube.com/watch?v=dzqDU9efnnk&t=286s
+  Source: https://codepen.io/Coding-in-Public/pen/NWyjZwO
+*/
+.container {
+  max-width: 70%;
+  display: grid;
+  place-content: center;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 2ch;
+  --position: 50%;
+  padding: 0;
+}
+
+.slider-image-container {
+  max-width: 100%;
+  max-height: 90vh;
+}
+
+.slider-image {
+  /* width: 1000px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: left; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+  height: 100%;
+  /* height: 100%; */
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  /* for firefox */
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.slider:focus-visible ~ .slider-button {
+  outline: 5px solid black;
+  outline-offset: 3px;
+}
+
+.slider-line {
+  position: absolute;
+  inset: 0;
+  width: 0.3rem;
+  height: 100%;
+  background-color: #2a2d34;
+  z-index: 0;
+  left: var(--position);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.slider-button i.slider-button {
+  position: absolute;
+  /* background-color: #fafafa; */
+  padding: .5rem;
+  border-radius: 100vw;
+  display: grid;
+  place-items: center;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+  color: #2a2d34;
 }
 
 /* reflection section */
-.reflection-next-steps {
+.reflection-next-steps-section {
   max-width: 70%;
-  margin: 3rem auto;
+  margin: var(--section-margin);
   width: 100%;
 }
 
+.reflections {
+  display: flex;
+  gap: 5rem;
+}
+
+ul.key-takeaways {
+  margin-bottom: 3rem;
+}
+
+.team-picture-image {
+  height: 70vh;
+  width: auto;
+  max-height: 70vh;
+  border-radius: 2ch;
+}
 
 /* --------------------------------------------- RESPONSIVE LAYOUT --------------------------------------------------------------------*/
 @media screen and (max-width: 720px) {
+  /* h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  } */
+
   nav {
     padding: 1.5rem 1.5rem;
   }
@@ -1008,6 +1263,47 @@ div.div {
   .scroll-up {
     right: 2%;
   }
+
+  /* CASE STUDY */
+  .project-context-container {
+    flex-direction: column;
+  }
+
+  .project-context {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .deliverable-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  iframe.product-video {
+    width: fit-content;
+    height: auto;
+  }
+
+  /* .bento-box {
+    display: none;
+  } */
+  .two-column {
+    flex-direction: column;
+  }
+
+  div.column, .column {
+    width: 100%;
+  }
+
+  .comp-analysis, .competitive-analysis-image {
+    max-width: 70vw;
+  }
+  
+  .findings-recommendations-container {
+    flex-direction: column;
+    gap: 0;
+  } /*use carousel for this in mobile screen*/
 }
 
 
