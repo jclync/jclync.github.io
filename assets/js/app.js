@@ -1,3 +1,33 @@
+/* 
+  nav bar slides down
+  Source: https://www.w3schools.com/howto/howto_js_navbar_slide.asp
+*/
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar-scroll-down").style.top = "0";
+  } else {
+    document.getElementById("navbar-scroll-down").style.top = "-100px";
+  }
+}
+
+
+// Hide navbar when scroll down. Show navbar when scroll up.
+// Source : https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp
+// Source: https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
+var prevScrollpos = window.scrollY;
+
+document.addEventListener('scroll', (e) => {
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+});
+
 // scroll to top functionality
 const scrollUp = document.getElementById("scroll-up");
 
@@ -95,7 +125,6 @@ document.querySelector('.slider').addEventListener('input', (e) => {
   container.style.setProperty('--position', `${e.target.value}%`);
 })
 
-
 // Slider 2
 const container2 = document.querySelector('.container-2');
 
@@ -109,6 +138,7 @@ const container3 = document.querySelector('.container-3');
 document.querySelector('.slider-3').addEventListener('input', (e) => {
   container3.style.setProperty('--position', `${e.target.value}%`);
 })
+
 /*
 
 // password protected case study

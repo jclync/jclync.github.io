@@ -133,7 +133,7 @@ a:hover {
 }
 
 /* --------------------------------------------- NAV BAR ----------------------------------------------------------------------------*/
-nav {
+/* nav {
   position: sticky;
   top: 0;
   left: 0;
@@ -158,16 +158,7 @@ nav ul {
 
 nav ul li {
   font-weight: var(--bold-font);
-}
-
-.burger-menu {
-  color: var(--primary-color);
-  font-size: 2rem;
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-  display: none;
-}
+} 
 
 nav a.home-item {
   font-weight: var(--bold-font);
@@ -179,13 +170,9 @@ nav a.home-item:hover {
 
 ul.nav-bar li a.active {
   color: #d3cbf5;  
-  /* border-bottom: solid 3px #d3cbf5;  */
+  // border-bottom: solid 3px #d3cbf5; 
 }
 
-/* 
-   underline hover left to right
-   source: https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
-*/ 
 ul.nav-bar li a {
   text-decoration: none;
   position: relative;
@@ -217,6 +204,180 @@ ul.nav-bar li a:hover::after {
   width: 100%;
   transition: 0.5s; 
 }
+
+*/
+/* .navbar {
+  background-color: var(--bg-color);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 2rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+} */
+
+#navbar-scroll-down {
+  background-color: var(--bg-color);
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  transition: top 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  /* padding: 1.5rem 3.5rem; */
+  padding: 0.5rem;
+}
+
+#navbar {
+  background-color: var(--bg-color);
+  /* background-color: transparent; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  /* padding: 1.5rem 3.5rem; */
+  padding: 0.5rem;
+}
+
+.navbar-right {
+  display: flex;
+  float: right;
+  /* gap: 2rem; */
+}
+
+#navbar a, #navbar-scroll-down a {
+  float: right;
+  color: var(--primary-color);
+  display: block;
+  text-align: center;
+  padding: 1.2rem;
+  text-decoration: none;
+  font-weight: var(--bold-font);
+  border-radius: 2ch;
+}
+
+#navbar a.home-item, #navbar-scroll-down a.home-item {
+  float: left;
+  display: block;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 1.2rem;
+  text-decoration: none;
+  font-weight: var(--bold-font);
+  border-radius: 2ch;
+}
+
+#navbar a.home-item:hover, #navbar-scroll-down a.home-item:hover {
+  color: #d3cbf5;
+  /* background-color: #ebedf2; */
+  transition: 0.3s;
+}
+
+#navbar a.active, #navbar-scroll-down a.active {
+  color: #d3cbf5;  
+}
+
+/* #navbar a.nav-item:hover, #navbar-scroll-down a.nav-item:hover {
+  background-color: #ebedf2;
+  transition: 0.3s;
+} */
+
+/* 
+   underline hover left to right
+   source: https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
+*/ 
+a.nav-item {
+  position: relative;
+}
+
+a.nav-item::before, a.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 1.1rem;
+  left: 0.6rem;
+  border-top-width: 3.5px;
+  border-top-color: #d3cbf5;
+}
+
+a.nav-item::before {
+  width: 80%;
+  /* border-top-style: dotted; */
+}
+
+a.nav-item::after {
+  border-top-style: solid;
+  width: 0;
+  transition: width .2s ease;
+}
+
+a.nav-item:hover::after {
+  width: 80%;
+  transition: 0.5s;
+}
+
+
+
+/* .navbar .nav-item {
+  float: right;
+  display: block;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 1.5rem;
+  text-decoration: none;
+  font-weight: var(--bold-font);
+  position: relative;
+  width: fit-content;
+  block-size: fit-content; 
+}
+
+
+
+.navbar .home-item:hover {
+  color: #d3cbf5;
+}
+
+.navbar a.active {
+  color: #d3cbf5;  
+} */
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* 
+   underline hover left to right
+   source: https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
+*/ 
+/* .navbar a.nav-item::before, .nav-bar a.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  border-bottom-width: 3.5px;
+  border-bottom-color: #d3cbf5;
+} 
+
+.navbar a.nav-item::before {
+  width: 100%;
+}
+
+.navbar a.nav-item::after {
+  border-bottom-style: solid;
+  width: 0;
+  transition: width .2s ease;
+}
+
+.nav-bar a.nav-item:hover::after {
+  width: 100%;
+  transition: 0.5s; 
+} */
 
 /* --------------------------------------------- HERO -----------------------------------------------------------------------------*/
 .hero {
@@ -380,7 +541,7 @@ button:hover {
   font-size: x-large;
   justify-content: center;
   width: 100%;
-  margin: var(--div-margin);
+  margin: 3rem auto;
   padding-top: 3rem;
   padding-bottom: 5rem;
 }
@@ -673,7 +834,7 @@ i.scroll-up:hover {
 /* project image section */
 .project-image-section {
   max-width: 70%;
-  margin: 1rem auto 6rem;
+  margin: 5rem auto 6rem;
   width: 100%;
 }
 
@@ -751,7 +912,7 @@ p.image-caption {
   margin: 0rem auto 3rem;
   align-items: center; */
   display: grid;
-  gap: 12.5rem;
+  gap: 5.5rem;
   /* max-width: 70rem; */
   grid-template-columns: 40% 45%;
   margin: 0rem auto 3rem;
@@ -951,51 +1112,14 @@ div.div {
 }
 
 .competitive-analysis-image {
-  width: 600px;
+  width: 700px;
   height: auto;
   border-radius: 2ch;
 }
 
 .comp-analysis {
-  width: 600px;
-  height: 425px;
-}
-
-/* ideation section */
-.carousel.slide {
-  margin: var(--div-margin);
-}
-
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 70%;
-  /* margin: var(--div-margin); */
-  margin: auto;
-}
-
-/* .carousel-caption {
-  color: #2a2d34;
-} */
-
-.carousel-control {
-  color: #2a2d34;
-  /* opacity: 0; */
-}
-
-.carousel-control:focus, .carousel-control:hover {
-  color: #2a2d34;
-}
-
-.carousel-indicators .active {
-  background-color: #2a2d34;
-}
-
-.carousel-indicators li {
-  border: 1px solid #2a2d34;
-}
-
-.carousel-control.left, .carousel-control.right {
-  background-image: none;
+  width: 700px;
+  height: 500px;
 }
 
 /* responsive bento box */
@@ -1059,9 +1183,18 @@ div.div {
   width: 100%;
 }
 
+/* 
+  Slideshow
+
+*/ 
+.slideshow-image {
+  width: 600px;
+  height: auto;
+}
+
 ul.list {
   list-style-type: disc;
-  margin: 0 4rem;
+  margin: 0 2rem;
 }
 
 ol.list {
@@ -1114,6 +1247,11 @@ ul.list li, ol.list li {
   Source: https://www.youtube.com/watch?v=dzqDU9efnnk&t=286s
   Source: https://codepen.io/Coding-in-Public/pen/NWyjZwO
 */
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   max-width: 70%;
   display: grid;
@@ -1194,7 +1332,7 @@ ul.list li, ol.list li {
 }
 
 /* reflection section */
-.reflection-next-steps-section {
+.reflection-section {
   max-width: 70%;
   margin: var(--section-margin);
   width: 100%;
