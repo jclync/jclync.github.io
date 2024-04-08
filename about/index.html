@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!--CSS Styles -->
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+
+        <!-- Animate CSS CDN -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <title>About | Jocelyn Chen's Portfolio</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <div class="navbar" id="navbar">
+            <a href=".." class="home-item">Jocelyn Chen</a>
+            <div class="navbar-right" id="navbar-right">
+                <a href=".." class="nav-item">Projects</a>
+                <a href="/about/" class="nav-item active">About</a>
+            </div>
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+            </button>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="hero section-regular" id="about">
+            <h1 class="header">  Hi again! Here's a little about me..</h1>
+            <div class="bio-container">
+                <img
+                    src="../assets/images/profile.jpg"
+                    alt="Jocelyn wearing coral t-shirt sitting in front of the Eiffel Tower"
+                    loading="lazy"
+                    class="hero-img"
+                />
+                <div class="bio">
+                    <p class="bio-paragraph">
+                        I first learned about design when I took a coding class in high school and learned how to use 
+                        Javascript to code an interactive minigame for my class project. With interests in the intersection 
+                        of design and technology, I began studying Human Centered Design & Engineering at the 
+                        University of Washington.
+                    </p>
+                    <p class="bio-paragraph">
+                        I am passionate about creating digital products that are inclusive and user-centric. As a designer, 
+                        I seek to bring people together using the products that I create, making meaningful impacts in their lives. 
+                    </p>
+                    <button class="resume button hidden">
+                        View Resume &#10142;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Philosophy Section -->
+        <section class="design-philosophy section-regular hidden" id="design-philosophy">
+            <div class="dp-container">
+                <h1>my design philosophy</h1>
+                <!-- animate__animated animate__shakeX -->
+                <div class="dp">
+                    <p class="dp-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
+                        dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
+                        inventore tempore minus nemo, iste ullam illo laboriosam maiores
+                        repudiandae quos!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- More about me section -->
+        <section class="hero section-regular" id="more">
+            <div class="grid-container">
+                <div>
+                    <h1 class="header">Quick Links</h1>
+                </div>  
+                <div>
+                    <ul class="bio-list">
+                        <li><a href="https://www.linkedin.com/in/jocelyn-chen-/" class="secondary link">LinkedIn&nearr;</a></li>
+                        <li><a href="mailto: jocelynchen1126@gmail.com" class="secondary link">Email&nearr;</a></li>
+                        <li><a href="https://github.com/jclync" class="secondary link">Coding Projects&nearr;</a></li>
+                        <li><a href="../assets/file-uploads/Jocelyn_Chen_Resume.pdf" target="_blank" class="secondary link">Resume&nearr;</a></li>
+                    </ul>
+                </div>  
+                <div>
+                    <h1 class="header">More about me ◡̈</h1>
+                </div>
+                <div class="bio-grid">
+                    <h3>I am..</h3>
+                    <ul class="bio-list">
+                        <li>Taiwanese-American, in which I grew up with an appreciation for lots of family time, card games, and food during cultural celebrations</li>
+                        <li>an avid baker</li>
+                        <li>a foodie, always looking up new food places to try</li>
+                        <li>a creative, catch me doodling, knitting, or using the occasional needle and thread</li>
+                        <li>a tinker, I enjoy fiddling with physical prototyping and coding projects</li>
+                        <li>a puzzler, I love logic puzzles and playing the NYT games</li>
+                    </ul>
+                    <h3>Outside of design, you can find me..</h3>
+                    <ul class="bio-list">
+                        <li>trying out new boba spots with my friends</li>
+                        <li>documenting my foodie adventures</li>
+                        <li>catching up on Chinese and Korean dramas on my watch list</li>
+                        <li>going on drives while listening to music</li>
+                    </ul>
+                </div>  
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="contact-me">
+
+        </section>
+
+        <!-- Scroll to top -->
+        <i class="scroll-up" id="scroll-up">
+            <i class="fa-solid fa-circle-chevron-up fa-2xl"></i>
+        </i>
+
+        <!-- <section class="lets-connect">
+            <h2>Let's work together</h2>
+            <p>If you would like to chat, shoot me an email at<br>
+                <a href="mailto: jocelynchen1126@gmail.com" target="_blank" class="footer-icon">jocelynchen1126@gmail.com</a>. I'd love to hear from you ◡̈
+            </p>
+        </section> -->
+        
+        <!-- Footer section -->
+        <footer>
+            <div class="two-column">
+                <div class="column">
+                    <h2 class="secondary">Thanks for stopping by!</h2>
+                    <p>If you'd like to connect, send me a message ◡̈</p>
+                    <p class="footer-link secondary">
+                        <a href="mailto: jocelynchen1126@gmail.com" class="link">Email</a> /
+                        <a href="https://www.linkedin.com/in/jocelyn-chen-/" class="link">LinkedIn</a>
+                    </p>
+                </div>
+                <div class="column right-align-text">
+                    <p class="secondary footer-copy">beep boop beep by jocelyn</p>
+                    <p class="secondary footer-copy">&copy; 2024 Jocelyn Chen</p>
+                </div>
+            </div> 
+        </footer>
+
+        <!-- Website scripts -->
+        <script src="../assets/js/app.js"></script>
+
+        <!-- Ion icons scripts -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+        </script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+        </script>
+
+        <!-- Font Awesome icons scripts -->
+        <script 
+            src="https://kit.fontawesome.com/a2a7dc6fc7.js" 
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>

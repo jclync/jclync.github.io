@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Bootstrap CSS and JS-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Animate CSS CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!--CSS Styles -->
+        <link rel="stylesheet" href="../assets/css/styles.css" />
+        <link rel="stylesheet" href="../assets/css/styles-husky-buddy.css" />
+
+        <title>Husky Buddy | Jocelyn Chen's Portfolio</title>
+  </head>
+
+  <body>
+        <!-- Navbar -->
+        <div class="navbar" id="navbar">
+            <a href=".." class="home-item">Jocelyn Chen</a>
+            <div class="navbar-right" id="navbar-right">
+                <a href=".." class="nav-item active">Projects</a>
+                <a href="/about/" class="nav-item">About</a>
+            </div>
+            <button class="burger-menu" id="burger-menu">
+                <ion-icon class="bars" name="menu-outline"></ion-icon>
+            </button>
+        </div>
+
+        <!-- sidenav -->
+        <div class="side-bar">
+            <ul class="sidenav">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#discovery">Discovery</a></li>
+                <li><a href="#ideation">Ideation</a></li>
+                <li><a href="#iteration">Iteration</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>            
+        </div>
+        
+        <!-- Project Image  Section -->
+        <section class="project-image-section">
+            <div class="image-container flex-column">
+                <img
+                    src="../assets/images/husky-buddy/project-image.png"
+                    alt="Husky Buddy Project Image"
+                    loading="lazy"
+                    class="project-image"/>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="overview-section section-bg-color" id="overview">
+            <div>
+                <h1 class="case-study-title">Husky Buddy</h1>
+                <h3 class="secondary">Creating student connections, one buddy at a time</h3>
+                <p>
+                    Husky Buddy emerged from a Human Centered Design & Engineering course project, HCDE318 - Introduction to User-Centered Design, where my team aimed to develop a solution to streamline the formation of online groups and boost student engagement amidst challenges presented by the COVID-19 pandemic. <br><br>
+                    Experiencing the transition to remote learning firsthand, my team and I witnessed the effects of 'Zoom fatigue' and the difficulties of connecting with classmates online. Motivated by these experiences, we chose to address the importance of community-building, recognizing its potential to foster greater student engagement in online learning environments.                 
+                </p>
+            </div>
+            <div class="project-context-container div-margin">
+                <div class="project-context timeframe">
+                    <p class="subheader">Timeframe</p>
+                    <p>March - June 2021</p>
+                </div>
+                <div class="project-context team">
+                    <p class="subheader">Team</p>
+                    <ul>
+                        <li>Mileena Ros</li>
+                        <li>Lucas Lovering</li>
+                    </ul>
+                </div>
+                <div class="project-context contributions">
+                    <p class="subheader">Key Contributions</p>
+                    <ul>
+                        <li>Product Design</li>
+                        <li>User Research</li>
+                        <li>Prototyping</li>
+                        <li>Interaction Design</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-overview div-margin">
+                <p class="secondary">Problem Overview</p>
+                <h2>Lack of engagement with online learning</h2>
+                <div>
+                    <p>                       
+                        In early 2020 when Covid first emerged, many higher education institutions in the US cancelled in-person instruction and transitioned to the new era of Zoom University. In a report on a random-sample survey of more than 1,000 students, <span class="markup">65% reported that they had fewer opportunities to collaborate with peers, and 42% said that engagement in course content was an issue</span> (<a href="https://everylearnereverywhere.org/wp-content/uploads/Suddenly-Online_DP_FINAL.pdf" target="_blank" class="link">Means and Neisler, 2020&nearr;</a>). Furthermore, another similar study found that <span class="markup">78% of respondents feel that online classes are unengaging, and 75% miss having interactions with instructors and peers</span> (<a href="https://tophat.com/press-releases/adrift-in-a-pandemic-survey/" target="_blank" class="link">Read, 2020&nearr;</a>).
+                    </p>
+                </div>
+            </div>
+            <div class="design-question div-margin">
+                <p class="secondary">Design Question</p>
+                <p class="design-q">
+                    How might we support students at the University of Washington in <span class=markup><b>fostering connections, meeting peers, and building engagement</b></span> amidst the challenges posed by online learning during the COVID-19 pandemic?
+                </p>
+            </div>
+        </section>
+        <!-- Impact Section -->
+        <section class="impact-section section-regular">
+            <div class="final-deliverable">
+                    <div class="image-container column">
+                        <img
+                            src="../assets/images/husky-buddy/project-image-square.png"
+                            alt="Husky Buddy Project Image"
+                            loading="lazy"
+                            class="final-deliverable-image"/>
+                    </div>
+                    <div class="column">
+                        <p class="secondary">Product Deliverable</p>
+                        <h2>Buddy up</h2>
+                        <p> 
+                            Husky Buddy helps students to connect with peers in their classes through community forums and groups, creating a space for encouraged engagement and meeting like-minded individuals beyond the black screens of Zoom University. 
+                        </p>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Discovery Section -->
+        <section class="discovery-section section-bg-color" id="discovery">
+            <!-- Interviews -->
+            <div class="interviews">
+                <p class="secondary">Research: Interviews</p>
+                <h2>Deep diving into our problem space</h2>
+                <p>
+                    To understand our project goals and problem space, we conducted interviews with our target user group (students at UW). Our team conducted three 30-minute semi-structured interviews over Zoom, asking questions to get insight on their experiences with online learning and making connections with classmates and instructors during the pandemic. We then analyzed the responses by grouping responses together in clusters to see if there were any patterns or themes in the experiences of the students.
+                </p>
+            </div>
+            <div class="findings-recommendations-grid div-margin">
+                <p class="secondary mobile-hidden">Interview Insights</p>
+                <div class="findings-recommendations-container">
+                    <div class="findings-container column">
+                        <p class="secondary mobile-query">Interview Finding #01</p>
+                        <h3>Too many communication channels</h3>
+                        <p>
+                            Students express frustration with having to manage multiple apps for communication, such as Canvas, Instagram, Discord, Messenger, etc.
+                        </p>                        
+                    </div>
+                    <div class="recommendations-container column">
+                        <p class="secondary mobile-query">Recommendation #01</p>
+                        <h3>Unified communications hub</h3>
+                        <p>
+                            A centralized platform serves as a one-stop solution for tracking peers, instructors, and class-related content and communications.
+                        </p>
+                    </div>
+                </div>
+                <div class="findings-recommendations-container">
+                    <div class="findings-container column">
+                        <p class="secondary mobile-query">Interview Finding #02</p>
+                        <h3>Lack of engagement</h3>
+                        <p>
+                            Students feel there is a lack of interaction in online learning, making it difficult to stay engaged and follow along with the coursework.
+                        </p>                        
+                    </div>
+                    <div class="recommendations-container column">
+                        <p class="secondary mobile-query">Recommendation #02</p>
+                        <h3>Interactive forums</h3>
+                        <p>
+                            Increase engagement through community forums where students actively converse with instructors and peers regarding course-related content.
+                        </p>
+                    </div>
+                </div>
+                <div class="findings-recommendations-container">
+                    <div class="findings-container column no-bottom-margin">
+                        <p class="secondary mobile-query">Interview Finding #03</p>
+                        <h3>Community building</h3>
+                        <p>
+                            Students desire opportunities to connect and interact with their peers.  
+                        </p>                        
+                    </div>
+                    <div class="recommendations-container column no-bottom-margin">
+                        <p class="secondary mobile-query">Recommendation #03</p>
+                        <h3>Empowering collaboration</h3>
+                        <p>
+                            Give students the agency to create and join groups, fostering collaboration with peers on projects and coursework. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ideation Section -->
+        <section class="ideation-section section-regular" id="ideation">
+            <!-- Personas Div -->
+            <div class="personas div-margin">
+                <p class="secondary">Ideation: User Personas</p>
+                <h2>Meet Mia</h2>
+                <p>
+                    Our team analyzed the interviews to identify specific pain points, goals, and desires that our interviewees expressed. We used these interview insights to create user personas that encompassed all the pain points and goals of our users. Creating these personas gave our group better direction as we now had a hypothetical picture of who we were designing for:
+                </p>
+                <div class="image-container flex-column img-margin">
+                    <img
+                    src="../assets/images/husky-buddy/user-persona.png"
+                    alt="User Persona - Mia"
+                    loading="lazy"
+                    class="user-persona-image widescreen-xl"/>
+                    <p class="image-caption">Mia, a freshman at UW</p>
+                </div>
+            </div>
+            <!-- Journey Map Div -->
+            <div class="journey-map div-margin">
+                <p class="secondary">Ideation: Journey Map</p>
+                <h2>Going on a journey</h2>
+                <p>
+                    Using our persona, Mia, we highlighted a couple goals from our user interviews, specifically touching on the interests of <span class="markup">forming study groups and having more ways to interact with classmates</span>. We created a user journey map of her experience with creating a study group and and hosting a group meeting. This journey map helped our team to locate positive points to build upon and negative points to resolve in our own mobile application.
+                </p>
+                <div class="image-container flex-column img-margin">
+                    <img
+                    src="../assets/images/husky-buddy/journey-map.jpg"
+                    alt="Mia's Journey Map to creating a study group"
+                    loading="lazy"
+                    class="user-persona-image widescreen-xl"/>
+                    <p class="image-caption">Mia's journey to creating a study group</p>
+                </div>
+                <p>
+                    We found that <b>users tend to experience more negative emotions (annoyance, frustration, and stress) during the formation of and meeting with study groups</b>. Thus, we wanted to <span class="markup">steer our product towards an centralized application that would allow users to form and meet with their groups without the hassle of having to use multiple applications</span>. 
+                </p>
+            </div>
+            <!-- Design Requirements -->
+            <div>
+                <p class="secondary">Ideation: Design Requirements</p>
+                <h2>Narrowing down the focus</h2>
+                <p>
+                    Now that our team had a clearer project direction in mind, we formulated some design requirements to focus on addressing the pain points we identified from our interviews and user persona. 
+                </p>
+                <div class="bb-bento-box img-margin">
+                    <div class="bb-box">
+                        <p class="subheader">Centralized Platform</p>
+                        <ul class="list">
+                            <li>Assist students in finding peers who share similar interests, such as preferred meeting times and enrolled classes.</li>
+                            <li>Empower students to efficiently create, join, and manage groups by providing tools to easily keep track of their courses and classmates.</li>
+                        </ul>
+                    </div>
+                    <div class="bb-box">
+                        <p class="subheader">Content Sharing</p>
+                        <ul class="list">
+                            <li>Enable students to easily share various information and files within their groups as well as with other peers.</li>
+                            <li>Foster student engagement by encouraging participation in class community forums on coursework and related subjects.</li>
+                        </ul>
+                    </div>
+                    <div class="bb-box">
+                        <p class="subheader">Notification System</p>
+                        <ul class="list">
+                            <li>Provide timely reminders for students of upcoming classes, scheduled meetings, and important events.</li>
+                            <li>Allow students to view class-wide announcements to stay on top of classwork and projects.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Information Architecture -->
+            <div class="info-arch hidden">
+                <p class="secondary">Ideation: Information Architecture</p>
+                <h2>Mapping out the architecture</h2>
+
+                <p>
+                    Once we had our design requirements, our team created an information architecture diagram to map out the flow of the navigation of the mobile platform.
+                </p>
+            </div>
+            <!-- Lo-fi Prototype -->
+            <div class="lo-fi-prototype">
+                <p class="secondary">Ideation: Lo-Fi Prototype</p>
+                <h2>Piecing the screens together</h2>
+                <p>
+                    Using our design requirements, we brainstormed wireframes for our platform, designing screens to map out user flows for our app. For the full wireframes, see this <a href="../assets/file-uploads/husky-buddy-annotated-wireframes.pdf" target="_blank" class="link underline"><b>document</b></a>.
+                </p>
+                <div class="image-container flex-column img-margin">
+                    <img
+                    src="../assets/images/husky-buddy/wireframes.jpg"
+                    alt="Wireframe screens"
+                    loading="lazy"
+                    class="user-persona-image widescreen-xl"/>
+                    <p class="image-caption">Some of the wireframes that our team developed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Iteration Section -->
+        <section class="iteration-section section-regular" id="iteration">
+            <!-- Usability Test -->
+            <div class="usability-testing div-margin">
+                <p class="secondary">Iteration: Usability Testing</p>
+                <h2>Are there any usability roadblocks?</h2>
+                <p>Interactivity components were then added to link the wireframed screens together into user flows. These flows then underwent <b>usability testing to gauge the user flow, feasibility, and intuitiveness of our mobile platform design</b>. Our team tested with a total of <b>6 participants</b>, all students attending the UW. Our tests were all conducted over Zoom, where we had one team member facilitate the session while the others took notes.
+                </p>
+                <p>
+                    Notes from the test sessions were grouped to find any patterns or themes, focusing on where participants struggled to complete an action or had difficulty with the interface, what features they liked, and any suggestions for improvements.
+                </p>
+                <div class="usability-test-findings">
+                    <div class="usability-test-finding-container img-margin">
+                        <div class="column">
+                            <p class="secondary">Usability Test Finding #01</p>
+                            <h3>Overcrowded content</h3>
+                            <p>
+                                A few participants expressed feeling overwhelmed by the announcements content on the home feed, making it too much to take in at once. 
+                            </p>
+                        </div>
+                        <div class="image-container column">
+                            <img
+                            src="../assets/images/husky-buddy/usability-test-findings-overcrowding.jpg"
+                            alt="Usability Test finding - overcrowding of content on page"
+                            loading="lazy"
+                            class="usability-test-findings-image two-three"/>
+                            <p class="image-caption">Overcrowding of content on page</p>
+                        </div>
+                    </div>
+                    <div class="usability-test-finding-container img-margin">
+                        <div class="column">
+                            <p class="secondary">Usability Test Finding #02</p>
+                            <h3>"Where's the group page?"</h3>
+                            <p>
+                                Several participants experienced difficulty in navigation due to icons being misaligned with their designated pages. Specifically, the third tab resembles a chat message icon, which <span class="markup">misled participants to assume that the page was for messaging, rather than for accessing 'Groups'</span>. Additionally, inconsistencies were observed in the icon styles across the prototype. 
+                            </p>
+                        </div>
+                        <div class="image-container column">
+                            <img
+                            src="../assets/images/husky-buddy/usability-test-findings-iconography.jpg"
+                            alt="Usability Test finding - misaligned icons"
+                            loading="lazy"
+                            class="usability-test-findings-image two-three"/>
+                            <p class="image-caption">Misaligned icons</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hi-fi Prototype -->
+            <div class="hi-fi-prototype div-margin">
+                <p class="secondary">Iteration: Lo-Fi to High-Fi Prototyping</p>
+                <h2>Putting it all together</h2>
+                <div>
+                    <p>
+                        Based on feedback from the usability test sessions, our team began working on transforming our platform from a low-fidelity to a high-fidelity prototype. Brand color, images, detailed, components, and additional interactivity were implemented. <br><br>
+                        My team members focused on the profile page and discussion forum for classes, while I focused on group creation and filtering for classmates. Additionally, I designed the Husky Buddy logo that was used for our app. Since the mascot of the University of Washington is an Alaskan Malamute, I incorporated the outline of a paw print into the 'HB' letters of the app logo. Gold and purple are the school colors, which I implemented as colors of the logo.
+                    </p>
+                    <div class="image-container img-margin">
+                        <img
+                        src="../assets/images/husky-buddy/app-logo.png"
+                        alt="Husky Buddy app logo"
+                        loading="lazy"
+                        class="app-logo-image widescreen"/>
+                        <p class="image-caption">Husky Buddy app logo, shown at three different size variations</p>
+                    </div>
+                </div>
+                <div class="final-prototype img-margin">
+                    <div class="column">
+                        <p class="secondary">Final Design</p>
+                        <h2>Visiting class pages</h2>
+                        <p>
+                            Class announcements are now displayed in the community forum pages their respective classes, reducing the cognitive load for users. <br><br>
+                            The home page houses all the classes that the student is a member of. Students can create, view, and respond to conversation posts in the class community pages, sparking engagement with their peers and instructors. Important announcements can be pinned to the top of the community page for quick viewing. 
+                        </p>
+                    </div>
+                    <div class="final-design-image-container image-container">
+                        <img
+                        src="../assets/images/husky-buddy/class-flow.gif"
+                        alt="Final design - Visiting a class page"
+                        loading="lazy"
+                        class="final-design-image one-two"/>
+                    </div>
+                </div>
+                <div class="final-prototype img-margin">
+                    <div class="column">
+                        <p class="secondary">Final Design</p>
+                        <h2>Timely reminders for meetings and events</h2>
+                        <p>
+                            Students are notified via the Husky Buddy app of upcoming and ongoing meetings and events. <br><br>
+                            The calendar page displays all events, such as classes, office hours, group meetings, etc.  
+                        </p>
+                    </div>
+                    <div class="final-design-image-container image-container">
+                        <img
+                        src="../assets/images/husky-buddy/events-flow.gif"
+                        alt="Final design - Timely reminders for meetings and events"
+                        loading="lazy"
+                        class="final-design-image one-two"/>
+                    </div>
+                </div>
+                <div class="final-prototype img-margin">
+                    <div class="column">
+                        <p class="secondary">Final Design</p>
+                        <h2>Filter classmates for groups</h2>
+                        <p>
+                            To find students with same preferred meeting times, students can filter when looking for classmates to form a group with. <br><br>
+                            The groups page houses all the groups that the student is a member of. Students are able to chat, share files, and virtually meet with their groups. 
+                        </p>
+                    </div>
+                    <div class="final-design-image-container image-container">
+                        <img
+                        src="../assets/images/husky-buddy/group-flow.gif"
+                        alt="Final design - Filtering classmates"
+                        loading="lazy"
+                        class="final-design-image one-two"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflections & Next Steps Section -->
+        <section class="reflection-section section-regular" id="reflection">
+            <div class="reflection-next-steps div-margin">
+                <div class="key-takeaways">
+                    <p class="secondary">Reflection & Next Steps</p>
+                    <h2>Reflecting and looking to the future</h2>
+                    <p>
+                        This was my first time collaborating remotely on a team project, which helped me learn skills in navigating group dynamics when it isn't possible for everyone to physically be together.
+                    </p>
+                    <h4>Key Takeaways:</h4>
+                    <ul class="key-takeaways list">
+                        <li>
+                            <b>Weekly check-ins are essential.</b> Our project was conducted entirely online due to the pandemic, so our team scheduled weekly dedicated time outside of our regularly scheduled class-time to share progress on our assigned work, discuss challenges, and align on next steps. These check-ins helped our team touch base to offer support, provide feedback, and brainstorm ideas collectively. 
+                        </li>
+                        <li>
+                            <b>As a designer, I value having concrete steps.</b> At the end of our team meetings, I would often ask about the next steps for our project. Knowing upcoming deadlines and next steps helped me effectively budget my time, ensuring adequate planning so I could finish my assigned tasks and keep our project on track for completion.
+                        </li>
+                    </ul>
+                </div>
+                <div class="next-steps">
+                    <p>
+                        <br>If we had more time, I would want to test our high-fidelity prototype to get feedback on the iterations we made based on the usability tests we conducted on the low-fidelity prototype. Since we only focused on students for our project, I would also consider the larger system. Considering different stakeholders (e.g. instructors), it would be interesting to think through how they would utilize this mobile app and get their input on if they have any suggestions for encouraging student participation and engagement.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scroll to top -->
+        <i class="scroll-up" id="scroll-up">
+            <i class="fa-solid fa-circle-chevron-up fa-2xl"></i>
+        </i>
+
+        <!-- Footer section -->
+        <footer>
+            <div class="two-column">
+                <div class="column">
+                    <h2 class="secondary">Thanks for stopping by!</h2>
+                    <p>If you'd like to connect, send me a message ◡̈</p>
+                    <p class="footer-link secondary">
+                        <a href="mailto: jocelynchen1126@gmail.com" class="link">Email</a> /
+                        <a href="https://www.linkedin.com/in/jocelyn-chen-/" class="link">LinkedIn</a>
+                    </p>
+                </div>
+                <div class="column right-align-text">
+                    <p class="secondary footer-copy">beep boop beep by jocelyn</p>
+                    <p class="secondary footer-copy">&copy; 2024 Jocelyn Chen</p>
+                </div>
+            </div> 
+        </footer>
+
+        <!-- Website scripts -->
+        <script src="../assets/js/app.js"></script>
+
+        <!-- Ion icons scripts -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+        </script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+        </script>
+
+        <!-- Font Awesome icons scripts -->
+        <script 
+            src="https://kit.fontawesome.com/a2a7dc6fc7.js" 
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>
