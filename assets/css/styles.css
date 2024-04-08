@@ -1080,6 +1080,14 @@ label.staticrypt-remember {
     margin: auto !important;
   }
 
+  #about-me {
+    padding-top: 6rem;
+    max-width: 90%;
+  }
+
+  #more { max-width: 90%; }
+  .grid-container { gap: 3rem; }
+
   div.hello .hero-img {
     width: 30vw;
     aspect-ratio: 612/792;
@@ -1087,9 +1095,7 @@ label.staticrypt-remember {
     /* height: auto; */
   }
 
-  .home-bio {
-    padding: 5rem 0.5rem;
-  }
+  .home-bio { padding: 5rem 0.5rem;  }
 
   .projects {
     padding-left: 5%;
@@ -1101,9 +1107,7 @@ label.staticrypt-remember {
     align-items: center;
   }
 
-  .project-title {
-    font-size: 2.5rem;
-  }
+  .project-title {  font-size: 2.5rem;  }
 
   .project-img {
     width: 43vw;
@@ -1112,7 +1116,6 @@ label.staticrypt-remember {
   }
 
   .bb-bento-box { flex-direction: column;}
-
   .bb-box { aspect-ratio: auto; }
 }
 
@@ -1131,6 +1134,15 @@ label.staticrypt-remember {
     margin-top: 2rem;
     padding-bottom: 1rem; 
   }
+
+  #about-me, #more { max-width: 75%; }
+
+  .bio-container {  flex-direction: column;  }
+  .hero-img { max-width: 80vw; height: auto; }
+  .bio-container div { display: flex; justify-content: center; }
+  .bio-container .bio { width: 100%;  padding: 0; }
+  .grid-container { display: flex; flex-direction: column; gap: 0; } 
+  .bio-grid h3 {margin-bottom: 0; }
 
   .home-page { 
     margin: auto; 
@@ -1159,10 +1171,7 @@ label.staticrypt-remember {
   .project-container { flex-direction: column;}
   .project-container.flipped { flex-direction: column-reverse;}
   .project-img { width: 85vw;}
-
-  .project-info {
-    max-width: 85vw;
-  }
+  .project-info {  max-width: 85vw;  }
 
   footer .two-column { flex-direction: row !important; }
   footer .column { width: 50% !important; }
