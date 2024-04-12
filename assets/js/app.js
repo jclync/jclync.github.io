@@ -284,5 +284,4 @@
   });*/
   
   /* encrypted html page
-  source: https://github.com/robinmoisson/staticrypt
-  */
+  source: https://github.com/robinmoisson/static
