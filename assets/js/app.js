@@ -122,7 +122,7 @@
       loop: true
     })
   }
-  
+
   /*
   if (document.body.className == 'uw-cerse-page') {
     // Slider
@@ -284,4 +284,4 @@
   });*/
   
   /* encrypted html page
-  source: https://github.com/robinmoisson/static
+  source: https://github.com/robinmoisson/static */
