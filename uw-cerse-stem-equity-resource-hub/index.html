@@ -26,6 +26,7 @@
             <div class="navbar-right" id="navbar-right">
                 <a href=".." class="nav-item active">Projects</a>
                 <a href="/about/" class="nav-item">About</a>
+                <a href="/playground/" class="nav-item">Playground</a>
             </div>
             <button class="burger-menu" id="burger-menu">
                 <ion-icon class="bars" name="menu-outline"></ion-icon>
@@ -135,10 +136,15 @@
                         </p>
                     </div>
                     <div class="video-container flex-column img-margin">
-                        <video controls class="product-video widescreen" >
+                        <!-- <video controls class="product-video widescreen" >
                             <source src="../assets/file-uploads/UW-SERCH-Video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
-                        </video>
+                        </video> -->
+                        <iframe 
+                            src="https://drive.google.com/file/d/1sJFG-Uv3vVKVF2_WpZ3vCoJdUTeFsPP8/preview" 
+                            class="product-video widescreen"       
+                            allow="autoplay">
+                        </iframe>
                         <p class="image-caption">UW SERCH product video</p>
                     </div>
                 </div>
@@ -159,22 +165,6 @@
             <div class="research-goals div-margin">
                 <p class="secondary">Overarching Research Goals</p>
                 <div class="research-goals-list">
-                    <div class="research-goal">
-                        <p class="subheader">1. Understand what types of STEM resources and opportunities users are interested in</p>
-                        <p>What constitutes as a STEM 'resource'?</p>
-                        <p>What resources and opportunities do students and staff look for?</p>
-                    </div>
-                    <div class="research-goal">
-                        <p class="subheader">2. Understand users' current comfort level with finding and sharing STEM resources</p>
-                        <p>What methods do students and staff use to find resources?</p>
-                        <p>How do staff share resources with students?</p>
-                    </div>
-                    <div class="research-goal">
-                        <p class="subheader">3. Understand roadblocks to finding STEM resources</p>
-                        <p>How accessible is it to locate STEM resources?</p>
-                    </div>
-                </div>
-                <div class="tablet-query">
                     <div class="bb-bento-box">
                         <div class="bb-box">
                             <p class="subheader">1. Understand what types of STEM resources and opportunities users are interested in</p>
@@ -199,7 +189,7 @@
                     </div>
                 </div>
             </div>
-            <div class="domain-research div-margin">
+            <div class="domain-research div-margin hidden">
                 <h2>Deep diving into our problem space</h2>
                 <p>
                     To familiarize ourself with our project, our team first conducted literature review to <b>explore the domains relevant 
@@ -208,10 +198,10 @@
             </div>
             <!-- Surveys -->
             <div class="surveys div-margin">
-                <p class="secondary">Research: Surveys</p>
+                <p class="secondary">User Research: Surveys</p>
                 <h2>The 'who' and the 'what'</h2>
                 <p>
-                    Our team wrote up and sent out a survey to understand Research Goals #2 and #3. We also wanted to see what STEM resources students and staff look for, what methods are used to access STEM resources, how accessible resources are, and what features they would like to see in a resource hub platform.
+                    Our team wrote up and sent out a survey to understand Research Goals #1 and #2. We wanted to discover what STEM resources students and staff generally look for, what methods are used to access STEM resources, how accessible resources are, and what features they would like to see in a resource hub platform.
                 </p>
                 <div class="bento-box img-margin">
                     <div class="bento bb1 mobile-hidden">
@@ -300,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="two-column div-margin">
+                <div class="two-column div-margin hidden">
                     <div class="column">
                         <p class="subheader">Participants and Recruitment</p>
                         <p>
@@ -315,7 +305,7 @@
                         </p>
                     </div>
                 </div> 
-                <div>
+                <div class="survey-insights">
                     <p class="secondary">Survey Insights</p>
                     <div class="bb-bento-box">
                         <div class="bb-box">
@@ -325,7 +315,7 @@
                             </ul>
                         </div>
                         <div class="bb-box">
-                            <p class="subheader">Common resources that are sought:</p>
+                            <p class="subheader">Students seek out resources for professional and personal growth:</p>
                             <ul class="list">
                                 <li>Research / internship opportunities</li>
                                 <li>Scholarships</li>
@@ -349,10 +339,10 @@
             </div>
             <!-- Interviews Div -->
             <div class="interviews div-margin">
-                <p class="secondary">Research: Interviews</p>
-                <h2>Getting a clearer picture on the direction</h2>
+                <p class="secondary">User Research: Interviews</p>
+                <h2>Uncovering challenges with finding STEM resources</h2>
                 <p>
-                    To understand our research goals, our team also conducted <b>interviews to dig deeper on the findings from the survey</b> and see if there were any commonalities and differences. Our team interviewed LSAMP staff as well as a couple students that had filled out our survey indicating they were interested in participating in a follow-up interview.
+                    Our team also conducted <b>interviews to dig deeper on the findings from the survey</b> and understand Research Goal #3. Our team interviewed LSAMP staff as well as a couple students that had filled out our survey indicating they were interested in participating in a follow-up interview.
                 </p>
                 <div class="two-bento-box img-margin">
                     <div class="box">
@@ -402,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="two-column">
+                <div class="two-column hidden">
                     <div class="column">
                         <p class="subheader">Participants and Recruitment</p>
                         <p> 
@@ -427,7 +417,7 @@
                     such as websites or mobile apps, to share STEM resources), interactivity with other users within the 
                     community, and intuitiveness to navigate the platform. 
                 </p> 
-                <div class="two-column no-bottom-border">
+                <div class="two-column no-bottom-border hidden">
                     <div class="column">
                         <p class="subheader">Platforms & Organizations</p>
                         <p> 
@@ -443,55 +433,48 @@
                         </p>
                     </div>
                 </div>
-                <div class="competitive-analysis-container img-margin">
-                    <div class="flip-image comp-analysis">
-                        <div class="flip-image-inner">
-                            <div class="flip-image-front">
-                                <img
-                                src="../assets/images/uw-cerse/competitive-analysis.jpg"
-                                alt=""
-                                loading="lazy"
-                                class="competitive-analysis-image"/>
-                                <p class="image-caption">Competitive analysis Miro board</p>
-                            </div>
-                            <div class="flip-image-back comp-analysis">
-                                <h2>Competitive Analysis</h2>
-                                <p>
-                                    From our analysis <span class="mobile-text-hidden">of existing platforms and student organizations</span>, we compiled a list of strengths and weaknesses.
-                                </p>
-                                <p class="subheader">Strengths:</p>
-                                <p>
-                                    The platforms and student organizations focused on <span class="mobile-text-hidden">celebrating the diversity of their audience, creating space for social engagement, networking, and collaboration.</span>
-                                    <span class="mobile-text">inclusion and engagement.</span>
-                                </p>
-                                <p class="subheader">Weaknesses:</p>
-                                <p>
-                                    Patterns of requiring membership fees, <span class="mobile-text-hidden">outdated events calendars, weak filtering features, and tacky thumbnails/design are what we want to improve through our platform.</span>
-                                    <span class="mobile-text">difficult navigation, and outdated resources were what we wanted to improve through our platform.</span>
-                                </p>
-                            </div>
-                        </div>
+                <div class="comp-analysis-strength-weakness two-column no-bottom-border img-margin">
+                    <div class="column">
+                        <p class="subheader">Overall Strengths</p>
+                        <p>
+                            The platforms and student organizations generally focus on diversity and inclusion of their audience, creating space for social engagement, networking, and collaboration.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p class="subheader">Overall Weaknesses</p>
+                        <p>
+                            Patterns of requiring fees to access, calendars that are not up to date, difficult navigation/search, and outdated resources were what we wanted to improve through our platform. 
+                        </p>
                     </div>
                 </div>
-                <div class="two-column no-bottom-border">
-                    <div class="column">
-                        <p class="subheader">Strengths</p>
-                        <ul class="list">
-                            <li>Real people sharing their experience (almost review style)</li>
-                            <li>Can be accessed by mobile or desktop</li>
-                            <li>Messaging feature / community forum for social networking</li>
-                            <li>Focus on diversity and inclusion so the community is smaller and niche</li>
-                            <li>Users can make a profile to save jobs and tailor their online presence towards their professional/personal goals</li>
-                        </ul>
+                <div class="competitive-analysis-container img-margin">
+                    <div class="image-container flex-column">
+                        <div class="tablet-query">
+                            <p class="subheader">Overall Strengths</p>
+                            <p>
+                                The platforms and student organizations generally focus on diversity and inclusion of their audience, creating space for social engagement, networking, and collaboration.
+                            </p>
+                        </div>
+                        <img
+                            src="../assets/images/uw-cerse/competitive-analysis-strengths.png"
+                            alt="Competitive Analysis - Strengths"
+                            loading="lazy"
+                            class="competitive-analysis-image"/>
+                        <p class="image-caption">Competitive Analysis: Strengths</p>
                     </div>
-                    <div class="column">
-                        <p class="subheader">Weaknesses</p>
-                        <ul class="list">
-                            <li>Have to be a member or pay a membership fee to participate</li>
-                            <li>Events and opportunity calendars are not updated on a regular basis</li>
-                            <li>Difficult to scroll through events page due to weak filtering feature</li>
-                            <li>Use of thumbnails and tacky design take away from the aesthetics of the platform</li>
-                        </ul>
+                    <div class="image-container flex-column">
+                        <div class="tablet-query">
+                            <p class="subheader">Overall Weaknesses</p>
+                            <p>
+                                Patterns of requiring fees to access, calendars that are not up to date, difficult navigation/search, and outdated resources were what we wanted to improve through our platform. 
+                            </p>
+                        </div>
+                        <img
+                            src="../assets/images/uw-cerse/competitive-analysis-weaknesses.png"
+                            alt="Competitive Analysis - Weaknesses"
+                            loading="lazy"
+                            class="competitive-analysis-image"/>
+                        <p class="image-caption">Competitive Analysis: Weaknesses</p>
                     </div>
                 </div>
             </div>
@@ -501,100 +484,88 @@
         <section class="findings-section section-regular" id="highlighted-findings">
             <div class="findings-recommendations div-margin">
                 <p class="secondary">Highlighted Research Findings</p>
-                <h2>What did we learn?</h2>
-                <div class="findings-recommendations-grid div-margin">
+                <h2>What did we uncover?</h2>
+                <div class="findings-recommendations-grid div-margin no-top-border">
                     <div class="findings-recommendations-container">
-                        <div class="findings-container column">
-                            <p class="secondary mobile-query">Research Finding #01</p>
-                            <h3>Mode of technology</h3>
+                        <div class="findings-container box">
+                            <h3>1. Mode of technology</h3>
                             <p>
                                 Students indicated that a website is their most utilized and preferred medium for accessing resources. Some students stated that a mobile app feels limiting, and they mainly access websites such as Indeed, Handshake, and the UW website, through desktop.
                             </p>                        
                         </div>
-                        <div class="recommendations-container column">
-                            <p class="secondary mobile-query">Recommendation #01</p>
-                            <h3>Website platform</h3>
+                        <div class="recommendations-container box">
+                            <h3>Rec 1. Website platform</h3>
                             <p> 
                                 Use a website as a virtual extension of the LSAMP center. A website acts as the centralized location for students and staff to keep track of STEM resources as well as communications with other people using the platform. 
                             </p>
                         </div>
                     </div>
                     <div class="findings-recommendations-container">
-                        <div class="findings-container column">
-                            <p class="secondary mobile-query">Research Finding #02</p>
-                            <h3>Outdated resources</h3>
+                        <div class="findings-container box">
+                            <h3>2. Outdated resources</h3>
                             <p>
                                 Students and staff specified that one of the challenges they face is that many resources are not updated 
                                 in current time. This prevents them from being able to get up-to-date information, and they may end up 
                                 missing out on opportunities as a result.
                             </p>                        
                         </div>
-                        <div class="recommendations-container column">
-                            <p class="secondary mobile-query">Recommendation #02</p>
-                            <h3>Updated and time-logged resources</h3>
+                        <div class="recommendations-container box">
+                            <h3>Rec 2. Updated and time-logged resources</h3>
                             <p>Date log of updates on the platform indicates the information is accurate and up-to-date.</p>
                         </div>
                     </div>
                     <div class="findings-recommendations-container">
-                        <div class="findings-container column">
-                            <p class="secondary mobile-query">Research Finding #03</p>
-                            <h3>Unclear POC</h3>
+                        <div class="findings-container box">
+                            <h3>3. Unclear POC</h3>
                             <p>
                                 When searching for STEM resources, students and staff faced issues when they had no way to contact the person who published the resource online - with no listed contact information, there was no way to learn more about the resource on the resource they were seeking out.
                             </p>                        
                         </div>
-                        <div class="recommendations-container column">
-                            <p class="secondary mobile-query">Recommendation #03</p>
-                            <h3>Transparent contact information</h3>
+                        <div class="recommendations-container box">
+                            <h3>Rec 3. Transparent contact information</h3>
                             <p>
-                                Include clear contact information about who/where the resource came from to provide a POC if any questions
+                                Provide clear contact information about who/where the resource came from to provide a POC if any questions
                                 arise.
                             </p>
                         </div>
                     </div>
                     <div class="findings-recommendations-container">
-                        <div class="findings-container column">
-                            <p class="secondary mobile-query">Research Finding #04</p>
-                            <h3>Accessibility issues</h3>
+                        <div class="findings-container box">
+                            <h3>4. Accessibility issues</h3>
                             <p>
                                 Students had issues with resources being flat-out hard to find, causing them to go down a rabbit hole during their searches. This created frustration as they were unable to get the exact information they wanted and needed.
                             </p>                        
                         </div>
-                        <div class="recommendations-container column">
-                            <p class="secondary mobile-query">Recommendation #04</p>
-                            <h3>Filtering feature</h3>
-                            <p>Organize searches in a more conclusive and effective manner.</p>
+                        <div class="recommendations-container box">
+                            <h3>Rec 4. Filtering feature</h3>
+                            <p>Organize searches in a conclusive and effective manner.</p>
                         </div>
                     </div>
                     <div class="findings-recommendations-container">
-                        <div class="findings-container column">
-                            <p class="secondary mobile-query">Research Finding #05</p>
-                            <h3>Community building</h3>
+                        <div class="findings-container box">
+                            <h3>5. Community building</h3>
                             <p>
                                 Students and staff expressed desire for interpersonal relationships, which would enhance social engagement 
                                 and provide accountability.
                             </p>                        
                         </div>
-                        <div class="recommendations-container column">
-                            <p class="secondary mobile-query">Recommendation #05</p>
-                            <h3>Messaging feature / online social groups</h3>
+                        <div class="recommendations-container box">
+                            <h3>Rec 5. Messaging feature / online social groups</h3>
                             <p>
                                 Community forums and messaging features to cultivate mentorship relationships and foster connections within groups, creating opportunity to find like-minded peers for collaboration and networking. 
                             </p>
                         </div>
                     </div>
                     <div class="findings-recommendations-container">
-                        <div class="findings-container column no-bottom-margin">
-                            <p class="secondary mobile-query">Research Finding #06</p>
-                            <h3>Motivation</h3>
+                        <div class="findings-container box no-bottom-margin">
+                            <h3>6. Motivation</h3>
                             <p>
-                                Students and staff emphasized the importance of highlighting students' diverse backgrounds, goals, and 
+                                Students look for resources that match their interests and majors. Additionally, staff emphasized the importance of highlighting students' diverse backgrounds, goals, and 
                                 aspirations while seeking out STEM-related resources.
                             </p>                        
                         </div>
-                        <div class="recommendations-container column no-bottom-margin">
-                            <p class="secondary mobile-query">Recommendation #06</p>
-                            <h3>Tailored profile</h3>
+                        <div class="recommendations-container box no-bottom-margin">
+                            <h3>Rec 6. Tailored profile</h3>
                             <p>Personalized profile page to let users select which resources they are interested in.</p>
                         </div>
                     </div>
@@ -602,7 +573,7 @@
                 <p> 
                     After our research and analysis, our team got in discussion with UW CERSE on project alignment. We decided that going 
                     forwards into the next phase of the project (prototyping the resource hub platform), our team would focus solely on the 
-                    University of Washington due to time constraints for the capstone project. For future implementation of the STEM resource hub, other schools will be considered. 
+                    University of Washington due to time constraints for the capstone project. For future implementation of the STEM resource hub, other schools will be involved. 
                 </p>
             </div>
         </section>
@@ -615,20 +586,6 @@
                 <p>
                     Analyzing our research, our team identified various student and staff users, which we used to <b>form personas acting as data-driven representations of our target audience</b>:
                 </p>
-                    <ul class="list mobile-hidden">
-                        <li>Maddie Smith - incoming freshman at UW. She is new to campus and wants to connect with students and 
-                            mentors in her major.
-                        </li>
-                        <li>Joe Butler - second-year student at UW. He is interested in tech and coding; looking for study spaces and 
-                            student organizations to help him with his professional growth as he applies to the Informatics major.
-                        </li>
-                        <li>Naomi Jones - third-year student at UW. She is looking for an easy way to find CS-related internships and 
-                            professional development opportunities.
-                        </li>
-                        <li>Ben Wilson - LSAMP coordinator at UW. He is passionate about helping his students succeed in their goals, and wants 
-                            a seamless way to share STEM resources with students to aid their professional and personal growth.
-                        </li>
-                    </ul>
                 <div class="carousel-container img-margin">
                     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -674,38 +631,84 @@
             <div class="brainstorm-wireframe div-margin">
                 <p class="secondary">Ideation: Brainstorm & Wireframes</p>
                 <h2>Letting the ideas flow</h2>
-                <p>Our team generated a <b>list of ideas and features to address our users' needs and pain points</b> that we discovered in our research. From our ideation, we clustered our 
-                    ideas into the following features:
+                <p>
+                    Our team generated a <b>list of ideas and features to address our users' needs and pain points</b> that we discovered in our research. From our ideation, we clustered our ideas into the following features:
                 </p>
-                <ul class="list">
-                    <li>Student profile page where they can view bookmarked resources and tailor their own interests</li>
-                    <li>Message portal for communication between staff, students, and organizations</li>
-                    <li>Require resource listings to show contact information</li>
-                    <li>Updated and current events to be shown on a calendar</li>
-                    <li>Filtering feature to streamline the search process</li>
-                </ul>
-                <div class="image-container img-margin flex-column"> 
-                    <img
-                        src="../assets/images/uw-cerse/brainstorm.png"
-                        alt="Brainstorming map"
-                        loading="lazy"
-                        class="brainstorm-image"/>
-                    <p class="image-caption">Brainstorm map</p>
+                <div class="brainstorm-grid img-margin">
+                    <div class="brainstorm-idea"> 
+                        <img
+                            src="../assets/images/uw-cerse/brainstorm-profile-page.png"
+                            alt="Student profile page"
+                            loading="lazy"
+                            class="brainstorm-image"/>
+                        <p class="image-caption">Student Profile Page</p>
+                        <div class="brainstorm-overlay">
+                            <div class="brainstorm-overlay-text">Students can view bookmarked resources and tailor their own interests</div>
+                        </div>
+                    </div>
+                    <div class="brainstorm-idea">
+                        <img
+                            src="../assets/images/uw-cerse/brainstorm-message.png"
+                            alt="Message portal"
+                            loading="lazy"
+                            class="brainstorm-image"/>
+                        <p class="image-caption">Message Portal</p>
+                        <div class="brainstorm-overlay">
+                            <div class="brainstorm-overlay-text">Message portal for communication between staff, students, and organizations</div>
+                        </div>
+                    </div>
+                    <div class="brainstorm-idea">
+                        <img
+                            src="../assets/images/uw-cerse/brainstorm-contact.png"
+                            alt="Resource contact information"
+                            loading="lazy"
+                            class="brainstorm-image"/>
+                        <p class="image-caption">Contact Information</p>
+                        <div class="brainstorm-overlay">
+                            <div class="brainstorm-overlay-text">Require resource listings to provide contact information</div>
+                        </div>
+                    </div>
+                    <div class="brainstorm-idea">
+                        <img
+                            src="../assets/images/uw-cerse/brainstorm-calendar.png"
+                            alt="Updated calendar"
+                            loading="lazy"
+                            class="brainstorm-image"/>
+                        <p class="image-caption">Updated Calendar</p>
+                        <div class="brainstorm-overlay">
+                            <div class="brainstorm-overlay-text">Display updated and current events on a calendar</div>
+                        </div>
+                    </div>
+                    <div class="brainstorm-idea">
+                        <img
+                            src="../assets/images/uw-cerse/brainstorm-search.png"
+                            alt="Filter to streamline search"
+                            loading="lazy"
+                            class="brainstorm-image"/>
+                        <p class="image-caption">Search Filtering</p>
+                        <div class="brainstorm-overlay">
+                            <div class="brainstorm-overlay-text">Filtering feature to streamline the search process</div>
+                        </div>
+                    </div>
                 </div>
-                <p>Using the brainstormed concept ideas, the resource hub website was sketched out first on paper, then wireframed in a low-fidelity prototype. For 
-                    the full sketches and wireframes, see this <a href="../assets/file-uploads/uw-cerse-wireframes.pdf" target="_blank" class="link underline"><b>document</b></a>.
+                <p>
+                    Using the brainstormed concept ideas, the resource hub website was sketched out first on paper, then wireframed in a low-fidelity prototype. For the full sketches and wireframes, see this <a href="../assets/file-uploads/uw-cerse-wireframes.pdf" target="_blank" class="link underline"><b>document</b></a>.
                 </p>
             </div>
         </section>
         <!-- Iteration Section -->
         <section class="iteration-section section-regular" id="iteration">
             <div class="usability-testing div-margin">
-                <p class="secondary">Iteration: Usability Testing</p>
+                <p class="secondary">Iteration: Usability Testing & Hi-Fi Prototype</p>
                 <h2>Testing, testing, 123</h2>
-                <p>Interactivity components were added to link the wireframed screens together into user flows. These flows then underwent <b>usability testing 
-                    to gauge the intuitiveness of the flows and functional usability of the website</b>. 
+                <p>
+                    The wireframed flows underwent <b>usability testing to gauge the intuitiveness of the flows and functional usability of the website prototype</b>. Overall, participants found the <span class="markup">left tab-bar navigation was pretty intuitive and user-friendly due to similarity with other websites</span> they've used before. However, some participants faced challenges due to the visual layout of the website, and there was also some <span class=markup>confusion in the wording of certain buttons, specifically during filtering</span>.
                 </p>
-                <div class="two-column">
+                <p>
+                    Based on feedback and recommendations from the testing, corresponding updates were made to the prototype. Brand color, images, detailed-components, and additional interactivity were implemented to transition to a higher-fidelity prototype. 
+                    However, due to limited time, our team was unable to recruit and schedule additional usability testing for the high-fidelity prototype. Thus, we were unable to get feedback on and further refine our high-fidelity prototype before handing off to UW CERSE.
+                </p>
+                <div class="two-column hidden">
                     <div class="column">
                         <p class="subheader">Participants and Recruitment</p>
                         <p> Our team tested with a total of <b>8 participants</b>. We sought to test with the students that would be using 
@@ -728,7 +731,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="image-container img-margin flex-column"> 
+                <div class="image-container img-margin flex-column hidden"> 
                     <img
                         src="../assets/images/uw-cerse/usability-test.png"
                         alt="Usability Test Data"
@@ -737,18 +740,8 @@
                         />
                     <p class="image-caption">Usability test data analysis</p>
                 </div>
-                <p>
-                    Notes from the usability test sessions were grouped by task, focusing on where participants struggled to complete an action or had difficulty with the interface, what features they liked, and any suggestions for improvements.
-                    Regarding the website prototype overall, participants felt that the <span class="markup">left tab-bar navigation was pretty intuitive and user-friendly due to similarity with other websites</span> they've used before. However, some participants faced challenges due to the visual layout of the website, and there was also some <span class=markup>confusion in the wording of certain buttons, specifically during filtering</span>.
-                </p>
             </div>
-            <div class="findings-recommendations div-margin">
-                <p class="secondary">Iteration: Lo-Fi to High-Fi Prototyping</p>
-                <h2>Putting it all together</h2>
-                <p>
-                    Based on feedback and recommendations from the testing, corresponding updates were made to the prototype. Brand color, images, detailed-components, and additional interactivity were implemented to transition to a higher-fidelity prototype. 
-                    However, due to limited time, our team was unable to recruit and schedule additional usability testing for the high-fidelity prototype. Thus, we were unable to get feedback on and further refine our high-fidelity prototype before handing off to UW CERSE.
-                </p>
+            <div class="iteration div-margin">
                 <div class="findings-recommendations-grid div-margin">
                     <div class="findings-recommendations-container">
                         <div class="findings-container column no-bottom-margin">

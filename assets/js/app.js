@@ -89,8 +89,8 @@
   const navbar = document.getElementById("navbar");
   
   burger.addEventListener("click", () => {
-      navtabs.classList.toggle("show");
-    });
+    navtabs.classList.toggle("show");
+  });
   
   // Close hamburger menu when a link is clicked
   

@@ -2,6 +2,9 @@
 :root {
   --primary-color: #2a2d34;
   --markup-color: #dbd8f3;
+  --project-color: #332a86;
+  --image-background-color: #eef2f8;
+  --bg-color: #fafafa;
 }
 
 .section-regular {
@@ -20,7 +23,7 @@
 
 /* --------------------------------------------- OVERVIEW SECTION ---------------------------------------------------------------------- */
 h1.case-study-title {
-  color: #332a86;
+  color: var(--project-color);
 }
 
 /* --------------------------------------------- IMPACT SECTION ---------------------------------------------------------------------- */
@@ -49,6 +52,40 @@ h1.case-study-title {
   display: flex;
   justify-content: space-evenly;
 }
+
+.findings-recommendations-container { margin-bottom: 2rem; }
+.findings-container.box, .recommendations-container-box { margin: 0; }
+.findings-container.box { 
+  border-radius: 0; 
+  background-color: 
+  transparent; 
+  padding: 2rem 1rem 3rem 0; 
+}
+
+.recommendations-container.box { 
+  padding: 2rem; 
+  border-bottom: none; 
+  background-color: var(--box-color);
+  border-radius: 2ch;
+  margin: auto; 
+  margin-top: 0; 
+}
+
+/* .findings-recommendations-container { 
+  align-items: center; 
+  border-bottom: dashed 1px blue; 
+  border-bottom-width: 50%; 
+}
+
+.recommendations-container { 
+  background-color: var(--image-background-color);
+  padding: 2rem; 
+  border-bottom: none;
+  border-radius: 2ch; 
+  margin-bottom: 0; 
+}
+
+.findings-container { margin-bottom: 0; padding-bottom: 0; } */
 
 /* 
   flip image
@@ -182,12 +219,14 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
 .competitive-analysis-container {
   display: flex;
   justify-content: center;
+  gap: 3rem; 
 }
 
 .competitive-analysis-image {
-  width: 700px;
+  width: 600px;
   height: auto;
   border-radius: 2ch;
+  max-width: 70vw; 
 }
 
 .comp-analysis {
@@ -252,10 +291,66 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   border: none;
 }
 
-.brainstorm-image {
+.brainstorm-miro-image {
   width: 600px;
   max-width: 70vw;
   border-radius: 2ch;
+}
+
+.brainstorm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+}
+
+.brainstorm-grid > div {
+  border-radius: 2ch;
+  transition: 50ms ease-in-out;
+  /* background-color: #584952;
+  border: 1px solid #e892b2; */
+  border: 1px solid var(--image-background-color);
+  /* width: 325px; */
+  /* height: auto; */
+  aspect-ratio: 1/1;
+}
+
+div .brainstorm-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; 
+  aspect-ratio: 1/1;
+  border-radius: 2ch;
+}
+
+.brainstorm-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease-in-out;
+  background-color: var(--image-background-color);
+  border-radius: 1rem; 
+  display: flex;
+  align-items: center; 
+  padding: 1rem; 
+}
+
+.brainstorm-idea:hover .brainstorm-overlay {
+  opacity: 1;
+}
+
+.brainstorm-idea:hover {
+  filter: brightness(90%);
+}
+
+.brainstorm-overlay-text {
+  color: var(--primary-color);
+  font-size: 1rem;
+  text-align: center;
 }
 
 /* --------------------------------------------- ITERATION SECTION ------------------------------------------------------------------- */  
@@ -397,8 +492,6 @@ ul.key-takeaways, ul.next-steps {
 
   .bb-box {  aspect-ratio: auto; }
 
-  .research-goals-list { display: none; }
-
   .hotdog {
     width: 95%;
     height: auto;
@@ -424,6 +517,9 @@ ul.key-takeaways, ul.next-steps {
   .two-bento-box .flip-image-back, .comp-analysis .flip-image-back { padding: 1.5rem 2rem; }
 
   .comp-analysis { height: 400px; }
+  .comp-analysis-strength-weakness { display: none; }
+  .competitive-analysis-image { max-width: 100% !important; }
+  .competitive-analysis-container { flex-direction: column;}
 
   p.subheader { margin-bottom: 0.5rem; }
 
@@ -431,7 +527,7 @@ ul.key-takeaways, ul.next-steps {
 
   .bb4 .list { padding-left: 1rem; }
 
-  .carousel { padding: 0 3rem 2.5rem;}
+  .carousel { padding: 0 3rem 2.5rem; width: 100% !important; }
 
   .project-overview-container {
     flex-direction: column;
@@ -500,7 +596,8 @@ ul.key-takeaways, ul.next-steps {
 
   .findings-recommendations-container { 
     flex-direction: column;
-    gap: 1rem;
+    gap: 0;
+    border-top: 2px dashed var(--markup-color);
   }
 
   .findings-container { 
