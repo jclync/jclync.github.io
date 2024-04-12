@@ -404,11 +404,6 @@ body {
   margin: 0 1rem;
 }
 
-/* .bb-box .subheader {
-  padding: 0 1rem;
-  border-left: 3px solid var(--secondary-color);
-} */
-
 .findings-container, .recommendations-container {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
