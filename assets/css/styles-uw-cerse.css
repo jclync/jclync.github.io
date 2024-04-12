@@ -5,6 +5,8 @@
   --project-color: #332a86;
   --image-background-color: #eef2f8;
   --bg-color: #fafafa;
+  --secondary-shadow: #b3b3b3;
+  --img-margin: 3rem auto 4rem;
 }
 
 .section-regular {
@@ -71,22 +73,6 @@ h1.case-study-title {
   margin-top: 0; 
 }
 
-/* .findings-recommendations-container { 
-  align-items: center; 
-  border-bottom: dashed 1px blue; 
-  border-bottom-width: 50%; 
-}
-
-.recommendations-container { 
-  background-color: var(--image-background-color);
-  padding: 2rem; 
-  border-bottom: none;
-  border-radius: 2ch; 
-  margin-bottom: 0; 
-}
-
-.findings-container { margin-bottom: 0; padding-bottom: 0; } */
-
 /* 
   flip image
   Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_image2 
@@ -142,16 +128,8 @@ h1.case-study-title {
   height: 375px;
 }
 
-.interviews .box {
-  padding: 0;
-  background-color: transparent;
-}
-
-
-.interview {
-  width: 400px;
-  height: 420px;
-}
+.interviews .box {  padding: 0;  background-color: transparent; }
+.interview { width: 400px;  height: 420px; }
 
 .interview-image {
   width: auto;
@@ -159,9 +137,7 @@ h1.case-study-title {
   border-radius: 2ch;
 }
 
-div.column {
-  width: 50%;
-}
+/* div.column {  width: 50%;} */
 
 /* bento box
 Source: https://codepen.io/stoumann/pen/GRzWVjZ
@@ -183,38 +159,12 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   }
 }
 
-.survey-image {
-  border-radius: 1ch;
-  object-fit: contain;
-}
-
-.bento {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bento-hotdog {
-  width: 100%;
-  height: 100%;
-  /* object-fit: cover; */
-}
-
-.bento-hamburger {
-  width: 100%;
-  height: 370px;
-}
-
-.hotdog {
-  height: 95%;
-  /* width: 95%; */
-}
-
-.hamburger {
-  /* min-height: 60%; */
-  width: 95%; 
-  /* height: 95%; */
-}
+.survey-image {  border-radius: 1ch;  object-fit: contain; }
+.bento {  display: flex;  justify-content: center;  align-items: center; }
+.bento-hotdog { width: 100%;  height: 100%; }
+.bento-hamburger {  width: 100%;  height: 370px; }
+.hotdog {  height: 95%; }
+.hamburger {  width: 95%; }
 
 .competitive-analysis-container {
   display: flex;
@@ -223,15 +173,17 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
 }
 
 .competitive-analysis-image {
+  /* width: 800px; */
+  height: auto;
+  border-radius: 2ch;
+  max-width: 90vw; 
+}
+
+.competitive-analysis-strength-image, .competitive-analysis-weakness-image {
   width: 600px;
   height: auto;
   border-radius: 2ch;
-  max-width: 70vw; 
-}
-
-.comp-analysis {
-  width: 700px;
-  height: 500px;
+  max-width: 50vw; 
 }
 
 /* responsive bento box */
@@ -259,21 +211,7 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   padding: 0 8rem 4rem;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  background-image: none;
-}
-
-/* .carousel {
-  width: 80%;
-  max-width: 70vw;
-  height: auto;
-}
-
-.carousel-image {
-  width: 80%;
-  max-width: 70vw;
-  height: auto;
-} */
+.carousel-control-next-icon, .carousel-control-prev-icon {  background-image: none; }
 
 .carousel-indicators [data-bs-target] {
   display:inline-block;
@@ -286,10 +224,7 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   border-radius:16px;
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover {
-  background-color: transparent;
-  border: none;
-}
+.carousel-control-prev:hover, .carousel-control-next:hover {  background-color: transparent;  border: none; }
 
 .brainstorm-miro-image {
   width: 600px;
@@ -303,18 +238,19 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   gap: 1rem;
 }
 
-.brainstorm-grid > div {
-  border-radius: 2ch;
+.brainstorm-grid > div.brainstorm-idea {
   transition: 50ms ease-in-out;
   /* background-color: #584952;
   border: 1px solid #e892b2; */
-  border: 1px solid var(--image-background-color);
   /* width: 325px; */
   /* height: auto; */
   aspect-ratio: 1/1;
 }
 
-div .brainstorm-image {
+.brainstorm-idea-container { text-align: center; }
+.brainstorm-grid .subheader { font-size: 1rem; margin-bottom: 0.5rem; }
+
+.brainstorm-image {
   width: 100%;
   height: auto;
   object-fit: contain; 
@@ -322,30 +258,7 @@ div .brainstorm-image {
   border-radius: 2ch;
 }
 
-.brainstorm-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease-in-out;
-  background-color: var(--image-background-color);
-  border-radius: 1rem; 
-  display: flex;
-  align-items: center; 
-  padding: 1rem; 
-}
-
-.brainstorm-idea:hover .brainstorm-overlay {
-  opacity: 1;
-}
-
-.brainstorm-idea:hover {
-  filter: brightness(90%);
-}
+.brainstorm-idea:hover {  filter: brightness(90%); }
 
 .brainstorm-overlay-text {
   color: var(--primary-color);
@@ -354,10 +267,6 @@ div .brainstorm-image {
 }
 
 /* --------------------------------------------- ITERATION SECTION ------------------------------------------------------------------- */  
-.usability-test {
-  padding-left: 2rem;
-}
-
 .usability-test-image {
   height: 70vh;
   width: auto;
@@ -365,8 +274,27 @@ div .brainstorm-image {
   border-radius: 2ch;
 }
 
-.prototype-screen-image {
-  width: 100%;
+.iteration-container {  display: flex; gap: 5rem; }
+
+.iteration-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px dashed var(--secondary-shadow);
+}
+
+.iteration-image {
+  height: auto;
+  border-radius: 2ch;
+  max-width: 90vw; 
+}
+
+.iteration-finding-image, .iteration-updated-design-image {
+  width: 600px;
+  height: auto;
+  border-radius: 2ch;
+  max-width: 80vw; 
 }
 
 /* slider 
@@ -483,32 +411,20 @@ ul.key-takeaways, ul.next-steps {
 @media screen and (max-width: 768px) {
   /* tablet */
   .section-regular { max-width: 75%; }
-
   .section-bg-color { padding: 5rem 12% 3rem 13%;}
-
   .project-image-section { margin: auto !important; }
 
   .bb-bento-box { flex-direction: column; }
-
   .bb-box {  aspect-ratio: auto; }
 
-  .hotdog {
-    width: 95%;
-    height: auto;
-  }
-
+  .hotdog { width: 95%;  height: auto; }
   .flip-image-back { padding: 1.5rem 1rem; }
-
   .flip-image-back p, .flip-image-back ul, .two-bento-box ol { font-size: 0.75rem; }
-
   .flip-image-back ul { margin: 0; }
-
   .interview { width: 100%; }
 
   .two-bento-box { gap: 1rem; }
-
   .two-bento-box .box { margin: auto; }
-
   .two-bento-box ol { 
     margin: auto; 
     padding-left:1rem;
@@ -517,16 +433,13 @@ ul.key-takeaways, ul.next-steps {
   .two-bento-box .flip-image-back, .comp-analysis .flip-image-back { padding: 1.5rem 2rem; }
 
   .comp-analysis { height: 400px; }
-  .comp-analysis-strength-weakness { display: none; }
+  .comp-analysis-strength-weakness, .iteration-image-container { display: none !important; }
   .competitive-analysis-image { max-width: 100% !important; }
   .competitive-analysis-container { flex-direction: column;}
 
   p.subheader { margin-bottom: 0.5rem; }
-
   .list { padding-left: 0; }
-
   .bb4 .list { padding-left: 1rem; }
-
   .carousel { padding: 0 3rem 2.5rem; width: 100% !important; }
 
   .project-overview-container {
@@ -539,15 +452,7 @@ ul.key-takeaways, ul.next-steps {
     gap: 2rem;
   }
 
-  .usability-test-image {
-    max-width: 70vw;
-    height: auto;
-    aspect-ratio: 470/440;
-  }
-
-  .comp-analysis, .competitive-analysis-image {
-    max-width: 70vw;
-  }
+  .iteration-container { flex-direction: column; gap: 0; border-bottom: 2px dashed var(--secondary-shadow); margin: var(--img-margin); }
 
   .team-picture-image { 
     width: 35vw; 

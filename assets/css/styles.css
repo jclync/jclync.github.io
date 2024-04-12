@@ -252,9 +252,7 @@ button:hover {
    underline hover left to right
    source: https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
 */ 
-a.nav-item {
-  position: relative;
-}
+a.nav-item {  position: relative; }
 
 a.nav-item::before, a.nav-item::after {
   content: "";
@@ -265,10 +263,7 @@ a.nav-item::before, a.nav-item::after {
   border-top-color: var(--secondary-color);
 }
 
-a.nav-item::before {
-  width: 100%;
-  /* border-top-style: dotted; */
-}
+a.nav-item::before {  width: 100%; /* border-top-style: dotted; */ }
 
 a.nav-item::after {
   border-top-style: solid;
@@ -276,10 +271,7 @@ a.nav-item::after {
   transition: width .2s ease;
 }
 
-a.nav-item:hover::after {
-  width: 100%;
-  transition: 0.5s;
-}
+a.nav-item:hover::after { width: 100%; transition: 0.5s; }
 
 .burger-menu {
   color: var(--primary-color);
@@ -298,7 +290,7 @@ body {
   scroll-timeline-name: --timeline;
 }
 
-.short-text, .tablet-query, .mobile-query { display: none; }
+.short-text, .tablet-query, .mobile-query { display: none !important; }
 
 .sidenav {
   position: fixed;
@@ -315,7 +307,7 @@ body {
   text-align: left;
   padding: 16px;
   transition: all 0.3s ease;
-  color: var(--secondary-shadow);
+  color: var(--primary-shadow);
   font-size: 1em;
 }
 
@@ -1140,8 +1132,10 @@ label.staticrypt-remember {
     padding: 5rem 5% 3rem;
   }
 
-  span.short-text, .tablet-query { display: inline-block; }
-  span.normal-text { display: none; }
+  .img-margin { margin: 2rem auto 3rem; }
+
+  span.short-text, .tablet-query { display: inline-block !important; }
+  span.normal-text { display: none !important; }
 
   .tablet-hidden {display: none !important; }
 

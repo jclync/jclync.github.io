@@ -123,6 +123,7 @@
     })
   }
   
+  /*
   if (document.body.className == 'uw-cerse-page') {
     // Slider
     const container = document.querySelector('.container-1');
@@ -145,7 +146,8 @@
       container3.style.setProperty('--position', `${e.target.value}%`);
     })
   }
-  
+  */ 
+
   // Staticrypt close password input form
   if (document.body.className == 'staticrypt-body') {
     const closePassForm = document.getElementById("close");
