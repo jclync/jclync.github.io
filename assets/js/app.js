@@ -115,7 +115,7 @@
         "Hello! My name is Jocelyn.", 
         "I am a Seattle-based designer, passionate about empowering people through inclusive design.", 
         "I recently graduated from the University of Washington.",
-        "Currently watching Queen of Tears.",
+        "Currently working on a Paint by Numbers while watching my way through Queen of Tears.",
         "Take a look around and get to know me!" 
         ],
       autoStart: true,

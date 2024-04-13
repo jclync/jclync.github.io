@@ -493,6 +493,7 @@ section#about-me, #playground {
 /* playground */
 .playground {
   min-height: 80vh;
+  padding-top: 6rem; 
 }
 
 .playground-grid {
@@ -504,8 +505,8 @@ section#about-me, #playground {
 .playground-grid > div {
   border-radius: 2ch;
   transition: 50ms ease-in-out;
-  background-color: #584952;
-  border: 1px solid #e892b2;
+  /* background-color: #584952; */
+  border: 1px solid var(--image-background-color);
   /* width: 325px; */
   /* height: auto; */
   aspect-ratio: 1/1;
@@ -522,7 +523,12 @@ section#about-me, #playground {
   height: auto;
   object-fit: cover; 
   aspect-ratio: 1/1;
+  border-radius: 2ch; 
 }
+
+/* .playground-div:hover {
+  transform: scale(1.05);
+} */
 
 .view-more {
   font-size: 1.5rem;
@@ -535,11 +541,20 @@ section#about-me, #playground {
   text-decoration: underline; 
 }
 
-.playground-container { display: flex; gap: 2rem; flex-wrap: wrap;}
-.playground-item-container { width: 350px; }
-.playground-item-container .subheader { margin-bottom: 0; margin-top: 1rem; }
+.playground-container { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap;
+}
+
+.playground-item-container { 
+  width: 325px; 
+  display: flex;
+  flex-direction: column;
+}
+
 .playground-item { 
-  width: 350px; 
+  width: 325px; 
   aspect-ratio: 1; 
   border: 1px solid var(--image-background-color);
   border-radius: 2ch; 
@@ -547,9 +562,21 @@ section#about-me, #playground {
   align-items: center;
 }
 
-.landscape {
-  width: 700px !important; 
-  aspect-ratio: auto; 
+.playground-item.linkable:hover {
+  transform: scale(1.02);
+}
+
+.playground-item-container .subheader {
+  margin-top: 1rem;
+  margin-bottom: 0; 
+}
+
+.playground-item-container a:hover {
+  color: var(--secondary-color);
+}
+
+.landscape img {
+  border-radius: 0 !important; 
 }
 
 .playground-item img {
