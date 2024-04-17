@@ -24,18 +24,16 @@ h1, h1.case-study-title {
     background-color: #F6F2FB;
 }
 
-/* .bb-box {
-    background-color: #f6f2fb;
-} */
-
-/* .overview-section {
-    margin: 0 auto 6rem;
-    padding-top: 5rem;
-}
-
-.impact-section {
-    margin: 3rem auto 4rem;
-} */
+.findings-container.box {
+    background-color: transparent;
+    border-radius: 0; 
+    margin-left: 0;
+    padding-left: 0;
+  }
+  
+  .recommendations-container.box { 
+    border-bottom: none; margin: auto; 
+  }
 
 .final-deliverable {
     display: flex;
@@ -70,17 +68,16 @@ h1, h1.case-study-title {
     .section-regular { max-width: 75%; }
     .section-bg-color { padding: 5rem 12% 3rem 13%;}
 
-    .final-deliverable {
-        flex-direction: row-reverse;
-    }
+    .findings-recommendations-container { gap: 3rem;  }
+    .findings-container.box { padding-right: 0; }
 
+    .final-deliverable { flex-direction: row-reverse;   }
     .final-deliverable-image { max-width: 60vw;}
 
     .usability-test-finding-container { 
         gap: 2rem; 
         padding-right: 0; 
     }
-
     .usability-test-findings-image { max-height: 75vh; }
     .usability-test-findings .column { width: 60%; }
     .final-prototype { gap: 2rem; }
@@ -88,6 +85,8 @@ h1, h1.case-study-title {
 
 @media only screen and (max-width: 425px) {
     /* mobile */
+    body { overflow-x: hidden; }
+
     .section-bg-color {  padding: 2rem 5% 2rem 20%; }
 
     .section-regular {
@@ -96,6 +95,24 @@ h1, h1.case-study-title {
     }
 
     p.subheader { margin-bottom: 0.5rem; }
+
+    /* .findings-recommendations-container { padding-top: 3rem; border-top: 2px dashed var(--markup-color);}
+    .findings-container.box { padding: 0; margin: auto;  }
+    .recommendations-container.box { margin: 0 0 3rem;  } */
+    .findings-recommendations-container { 
+        flex-direction: column;
+        gap: 0;
+        border-top: 2px dashed var(--markup-color);
+        margin-top: 3rem; 
+    }
+    
+    .findings-container { 
+        border-bottom: none; 
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    
+    .recommendations-container.box {padding: 2rem; }
 
     .project-context-container { flex-direction: column; }
     .project-context { width: 100%; }

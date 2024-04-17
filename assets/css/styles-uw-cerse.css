@@ -55,22 +55,15 @@ h1.case-study-title {
   justify-content: space-evenly;
 }
 
-.findings-recommendations-container { margin-bottom: 2rem; }
-.findings-container.box, .recommendations-container-box { margin: 0; }
-.findings-container.box { 
+.findings-container.box {
+  background-color: transparent;
   border-radius: 0; 
-  background-color: 
-  transparent; 
-  padding: 2rem 1rem 3rem 0; 
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .recommendations-container.box { 
-  padding: 2rem; 
-  border-bottom: none; 
-  background-color: var(--box-color);
-  border-radius: 2ch;
-  margin: auto; 
-  margin-top: 0; 
+  border-bottom: none; margin: auto; 
 }
 
 /* 
@@ -435,6 +428,8 @@ ul.key-takeaways, ul.next-steps {
   .comp-analysis-strength-weakness, .iteration-image-container { display: none !important; }
   .competitive-analysis-image { max-width: 100% !important; }
   .competitive-analysis-container { flex-direction: column;}
+  .findings-recommendations-container { gap: 3rem;  }
+  .findings-container.box { padding-right: 0; }
 
   p.subheader { margin-bottom: 0.5rem; }
   .list { padding-left: 0; }
@@ -502,6 +497,7 @@ ul.key-takeaways, ul.next-steps {
     flex-direction: column;
     gap: 0;
     border-top: 2px dashed var(--markup-color);
+    margin-top: 3rem; 
   }
 
   .findings-container { 
@@ -509,6 +505,8 @@ ul.key-takeaways, ul.next-steps {
     padding-bottom: 0;
     margin-bottom: 0;
   }
+
+  .recommendations-container.box {padding: 2rem; }
 
   .carousel-container button { display: none; }
   .carousel { padding: 0 0 2.5rem 0;}

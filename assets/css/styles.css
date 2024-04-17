@@ -346,6 +346,7 @@ body {
 
 .no-bottom-border { border-bottom: none !important; }
 .no-top-border { border-top: none !important; }
+.no-top-margin { padding-top: 0 !important;}
 
 .border-top {
   margin-top: 4rem !important;
@@ -405,10 +406,13 @@ body {
 }
 
 .findings-container, .recommendations-container {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   border-bottom: 2px dashed var(--secondary-shadow);
+  margin: 1rem 0; 
 }
+
+.recommendations-container p { margin-bottom: 0; }
 
 .findings-recommendations-container {
   display: flex;
@@ -1240,6 +1244,7 @@ label.staticrypt-remember {
   span.mobile-text, .mobile-query { display: inline-block; }
   span.mobile-text-hidden { display: none; }
   .mobile-hidden { display: none !important; }
+  .two-three { max-width: 80vw; height: auto; }
 
   section#about { 
     max-width: 80%; 
