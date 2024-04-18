@@ -45,7 +45,7 @@
   const sections = document.querySelectorAll("section[id]");
   
   // Add an event listener listening for scroll
-  if (document.body.className != 'home-page') {
+  if (document.body.id == 'case-study-page') {
     window.addEventListener("scroll", navHighlighter);
   }
   

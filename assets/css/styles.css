@@ -922,6 +922,50 @@ i.close-overlay:hover {
   color: var(--primary-shadow);
 }
 
+/* --------------------------------------------- ABOUT BENTO --------------------------------------------------------------------*/
+.about-me-section {
+  max-width: 80vw; 
+  margin: auto; 
+  padding-top: 6rem; 
+}
+
+.dashboard {
+  display: grid;
+  gap: 1.5rem;
+  & > * {
+    background-color: var(--image-background-color);
+    border-radius: 2ch;
+    border: 1px solid var(--image-background-color);
+    container-type: inline-size;
+    grid-column: var(--gc, auto);
+    grid-row: var(--gr, auto);
+    padding: 2rem;
+    & h2 {
+      margin-block: 0 1ch;
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.profile-image-box { padding: 0; }
+.dashboard .bio-list { margin-bottom: 0; }
+.about-me-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2ch; 
+}
+
+@media (min-width: 768px) {
+  .design-philosophy-box { --gc: span 6;  }
+  .outside-of-design-box { --gc: span 2;--gr: span 2; }
+  .quick-links-box { --gc: span 2; }
+  .dashboard { grid-template-columns: repeat(6, 1fr); }
+  .i-am-box { --gc: span 2; --gr: span 2; }
+  .bio-box { --gc: span 4; }
+  .profile-image-box { --gc: span 2; --gr: span 2; }
+}
+
 /* --------------------------------------------- DESIGN PHILOSOPHY --------------------------------------------------------------------*/
 
 
@@ -1241,7 +1285,7 @@ label.staticrypt-remember {
   .side-bar li { font-size: 0.7rem; }
   .sidenav a { padding: 0.75rem 0.5rem; }
   .sidenav { left: 0; }
-  span.mobile-text, .mobile-query { display: inline-block; }
+  span.mobile-text, .mobile-query { display: inline-block !important; }
   span.mobile-text-hidden { display: none; }
   .mobile-hidden { display: none !important; }
   .two-three { max-width: 80vw; height: auto; }
