@@ -9,7 +9,7 @@
   --secondary-font-family: "Noto Sans Mono", sans-serif;
   --normal-font: 400;
   --bold-font: 700;
-  --bolder-font: 900;
+  --bolder-font: 800;
   --bg-color: #fafafa;
   --primary-color: #2a2d34;
   /* --secondary-color: #d3cbf5; */
@@ -59,6 +59,7 @@ h1, h2, h3 {
 h1 {
   font-size: 3.5rem;   /* font-size: 55px; */
   color: var(--secondary-color);
+  font-weight: var(--bolder-font);
 }
 
 h2 {
