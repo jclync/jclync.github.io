@@ -1010,7 +1010,8 @@ footer {
   text-align: center;
   margin: 2rem 0 0;
   width: 100%; */
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  background-color: #fcf7f9; 
   width: 100%;
   padding: 5rem 15% 3rem;
 }
