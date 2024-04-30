@@ -1,0 +1,107 @@
+/* Variables */
+:root {
+    --primary-color: #2a2d34;
+    /* --markup-color: #E5F2EB; */
+    --markup-color: #e2eee7;
+    --image-background-color: #eef2f8;
+}
+/* .section-regular {
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.section-bg-color {
+    padding-top: 6rem;
+} */
+
+.section-regular {
+    margin: auto;
+    padding: 2rem 0 2rem;
+  }
+  
+.section-bg-color {
+    margin: auto;
+    padding: 2rem 15% 2rem;
+}
+
+.project-image-section {
+    margin: 0;
+    padding: 5rem 0 0;
+    background-color: #F5F9F7;
+}
+
+.overview-section {
+    padding-top: 6rem;
+}
+
+/* Mint Mobile */
+h1, h1.case-study-title {
+    color: #68AF85;
+}
+
+
+
+.competitive-analysis-image {
+    width: 90vw;
+    height: auto; 
+}
+
+.swot-analysis-image {
+    max-width: 70vw;
+    width: 100%;
+    height: auto; 
+}
+
+.survey-insight, .usability-testing-insight {
+    display: flex;
+    gap: 2rem;
+}
+
+.survey-insight-image, .usability-test-finding-image {
+    max-width: 40vw;
+    border-radius: 2ch; 
+    /* width: 100;
+    height: auto;  */
+}
+
+.hmw-container { display: flex; }
+
+.bb-box {
+    aspect-ratio: auto;
+    border-radius: 5ch;
+}
+
+.final-design-image {
+    max-width: 90vw; 
+    height: auto;
+}
+
+.lo-fi-prototype-image {
+    max-width: 80vw; 
+    width: 800px;
+    border-radius: 1ch; 
+}
+
+.usability-test-findings-image {
+    max-width: 90vw;
+    border-radius: 2ch;
+}
+
+@media screen and (max-width: 768px) {
+    /* tablet */
+    .usability-testing-insight { 
+        flex-direction: column;
+        gap: 0; 
+    }
+
+    .usability-test-finding-image {max-width: 100%; }
+}
+
+@media only screen and (max-width: 425px) {
+    /* mobile */
+    .project-context-container { flex-direction: column;}
+    .project-context-container .project-context { width: 100%; }
+
+    .survey-insight { flex-direction: column; gap: 0; }
+    .survey-insight-image { max-width: 100%; }
+}
