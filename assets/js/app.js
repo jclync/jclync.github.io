@@ -112,9 +112,8 @@
   if (document.body.className == 'home-page') {
     new Typewriter('#app', {
       strings: [
-        "Hello! My name is Jocelyn.", 
-        "I am a Seattle-based designer, passionate about empowering people through inclusive design.", 
-        "I recently graduated from the University of Washington.",
+        "I am a Seattle-based designer, striving to empower people through opening up space at the table.", 
+        "I recently graduated from the University of Washington, where I studied Human Centered Design & Engineering.",
         "Currently working on a Paint by Numbers while watching my way through Queen of Tears.",
         "Take a look around and get to know me!" 
         ],
@@ -271,5 +270,5 @@
   });
   */
   
-  /* encrypted html page
-  source: https://github.com/robinmoisson/static */
+  //encrypted html page
+  //source: https://github.com/robinmoisson/static
