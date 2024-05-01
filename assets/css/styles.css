@@ -594,6 +594,23 @@ section#about-me, #playground {
   border-radius: 2ch; 
 }
 
+.fun-container {
+  border: 1px solid var(--image-background-color);
+  border-radius: 2ch;
+  padding: 3rem; 
+}
+
+.fun-image-container {
+  display: flex;
+  gap: 1rem; 
+}
+
+.fun-image {
+  height: 40vh; 
+  width: auto; 
+  border-radius: 2ch; 
+}
+
 .context-container { display: flex; justify-content: space-between; gap: 2rem; }
 .context-container .context-text { width: 45vw; }
 .context-container .subheader { margin-bottom: 0; }
