@@ -96,6 +96,10 @@ p.secondary {
   font-size: 1.2em;
 }
 
+p.tertiary {
+  font-family: var(--secondary-font-family);
+}
+
 a.secondary {
   font-family: var(--secondary-font-family);
 }
@@ -594,11 +598,20 @@ section#about-me, #playground {
   border-radius: 2ch; 
 }
 
-.fun-container {
+.boba-run-game:hover {
+  content: url("/assets/images/playground/boba-run.gif");
+}
+
+.pumpkin:hover {
+  transition: 1s ease-in; 
+  content: url("/assets/images/playground/fun/pumpkin-painting-2.png");
+}
+
+/* .fun-container {
   border: 1px solid var(--image-background-color);
   border-radius: 2ch;
   padding: 3rem; 
-}
+} */
 
 .fun-image-container {
   display: flex;
