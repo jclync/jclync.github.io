@@ -90,10 +90,16 @@ p.subheader {
 
 p.secondary {
   font-family: var(--secondary-font-family);
-  color:var(--secondary-shadow);
+  color: var(--secondary-shadow);
   /* margin-bottom: var(--bottom-margin-2); */
   line-height:normal;
   font-size: 1.2em;
+}
+
+p.secondary.caps {
+  font-family: var(--font-family);
+  font-size: 1.2em; 
+  font-variant: small-caps;
 }
 
 p.tertiary {
