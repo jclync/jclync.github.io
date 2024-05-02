@@ -574,6 +574,10 @@ section#about-me, #playground {
   align-items: center;
 }
 
+.playground-div#vera-project, .playground-item#vera-project {
+  background-color: #FFF8F9;
+}
+
 .playground-item.linkable:hover, .playground-div.linkable:hover {
   transform: scale(1.03);
 }
@@ -633,6 +637,11 @@ section#about-me, #playground {
     /* margin: 4rem 0 0 0;  */
     margin: 0;
     padding-top: 4rem; 
+}
+
+#vera-project .project-image-section {
+  margin: 0;
+  padding-top: 4rem;
 }
 
 .scroll-container { 
