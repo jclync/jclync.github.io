@@ -1,0 +1,57 @@
+:root {
+    --primary-color: #2a2d34;
+    /* --markup-color: #E5F2EB; */
+    --markup-color: #ffd5de;
+    --image-background-color: #eef2f8;
+}
+
+.project-image-section {
+    margin: 0;
+    padding: 5rem 0 0;
+    background-color: #FFF8F9;
+}
+
+.overview-section {
+    padding-top: 6rem;
+}
+
+/* Mint Mobile */
+h1, h1.case-study-title {
+    color: #FF829D;
+}
+
+
+.current-landing-page-image {
+    width: 90vw;
+    height: auto;
+    max-width: 90vw;
+}
+
+.logo-image {
+    height: 500px;
+    max-height: 60vh;
+    width: auto;
+}
+
+.brand-book-container {
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-container { 
+    background-color: #333;
+    /* overflow: auto; */
+    overflow:auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: auto;
+    max-width: 50vw;
+    height: 60vh; 
+    border-radius: 2ch; 
+    border: 1px solid var(--image-background-color);
+  }
+  
+  .scroll-container img {
+    width: auto;
+    height: 60vh; 
+  }
