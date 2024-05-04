@@ -197,7 +197,55 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   Carousel
   Source: https://getbootstrap.com/docs/5.0/components/carousel/
 */ 
-.carousel-container {
+
+.finding-recommendation-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.finding-item {
+  /* margin: auto; */
+  aspect-ratio: auto;
+  background-color: transparent;
+  padding: 0;
+  /* padding-right: 0; 
+  padding-bottom: 1rem;  */
+}
+
+/* .recommendation-item {
+  margin: auto;
+} */
+
+.recommendation-item {
+  /* margin-top: auto;
+  margin-bottom: auto;  */
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2rem; 
+  background-color: var(--image-background-color);
+}
+
+.recommendation-item p {
+  margin-bottom: 0; 
+}
+
+.carousel-caption {
+  left: 10%;
+  right: 10%;
+}
+
+.brainstorm-image {
+  width: 15vw;
+  height: auto;
+  background-color: white; 
+  border-radius: 5ch; 
+}
+
+.carousel-item svg, .carousel-item rect { height: 70vh; }
+
+/* .carousel-container {
   display: flex;
   justify-content: center;
 }
@@ -220,7 +268,7 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   background-color: var(--primary-color);
   border: 1px;
   border-radius:16px;
-}
+} */
 
 .brainstorm-miro-image {
   width: 600px;
@@ -246,13 +294,13 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
 .brainstorm-idea-container { text-align: center; }
 .brainstorm-grid .subheader { font-size: 1rem; margin-bottom: 0.5rem; }
 
-.brainstorm-image {
+/* .brainstorm-image {
   width: 100%;
   height: auto;
   object-fit: contain; 
   aspect-ratio: 1/1;
   border-radius: 2ch;
-}
+} */
 
 .brainstorm-idea:hover {  filter: brightness(90%); }
 
@@ -422,11 +470,19 @@ ul.key-takeaways, ul.next-steps {
   .bb-bento-box { flex-direction: column; }
   .bb-box {  aspect-ratio: auto; }
 
-
+  .survey-insight-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .competitive-analysis.div-margin {  margin-bottom: 3rem; }
+  .survey-insight-image {width: 100%;}
   /* .flip-image-back { padding: 1.5rem 1rem; }
   .flip-image-back p, .flip-image-back .list li, .two-bento-box ol { font-size: 0.75rem; }
   .flip-image-back ul { margin: 0; } */
   .interview { width: 100%; }
+  .dashboard div { padding: 1.5rem; }
+  .interview-questions li { font-size: 0.8em; }
+  .interview-quote p { font-size: 0.6em; }
 
   .two-bento-box { gap: 1rem; }
   .two-bento-box .box { margin: auto; }
@@ -435,7 +491,10 @@ ul.key-takeaways, ul.next-steps {
     padding-left:1rem;
   }
 
-  .dashboard .interview-image-overlay p, .activity-feed p, .dashboard .image-caption {  font-size: 0.75rem; }
+  .dashboard .interview-image-overlay p, .dashboard .image-caption {  font-size: 0.6rem; }
+  .quote-box .interview-image-overlay p { font-size: 0.5rem; }
+  .dashboard .interview-image-overlay { padding: 1.5rem; }
+  .dashboard .image-container { padding: 0; }
 
   .two-bento-box .flip-image-back, .comp-analysis .flip-image-back { padding: 1.5rem 2rem; }
 
@@ -445,6 +504,8 @@ ul.key-takeaways, ul.next-steps {
   .competitive-analysis-container { flex-direction: column;}
   .findings-recommendations-container { gap: 3rem;  }
   .findings-container.box { padding-right: 0; }
+  .recommendation-item { padding: 2rem; }
+  .brainstorm-image { width: 20vw; border-radius: 3ch; }
 
   p.subheader { margin-bottom: 0.5rem; }
   .list { padding-left: 0; }
@@ -461,7 +522,10 @@ ul.key-takeaways, ul.next-steps {
     gap: 2rem;
   }
 
-  .iteration-container { flex-direction: column; gap: 0; border-bottom: 2px dashed var(--secondary-shadow); margin: var(--img-margin); }
+  .iteration-container { flex-direction: column; gap: 0; }
+
+  .final-design-container { flex-direction: column; gap: 0; }
+  .final-design-image { max-width: 100% !important; width: 100% !important; }
 
   .team-picture-image { 
     width: 35vw; 
@@ -497,6 +561,7 @@ ul.key-takeaways, ul.next-steps {
 
   .bb3 { --gc: span 4; --gr: span 2; }
   .bb2 { --gc: span 4; --gr: span 2; }
+  .mobile-query.container { background-color: white; }
 
   .two-column { 
     flex-direction: column; 
@@ -507,6 +572,9 @@ ul.key-takeaways, ul.next-steps {
   .surveys .bb-box { margin: 1rem 0; }
   .two-bento-box { flex-direction: column; }
   .two-bento-box .box { margin: 0; }
+
+  .recommendation-item { flex-direction: column;}
+  .brainstorm-image { width: 50vw; }
 
   .findings-recommendations-container { 
     flex-direction: column;
@@ -520,6 +588,8 @@ ul.key-takeaways, ul.next-steps {
     padding-bottom: 0;
     margin-bottom: 0;
   }
+
+  .iteration-container { gap: 2rem; }
 
   .recommendations-container.box {padding: 2rem; }
 

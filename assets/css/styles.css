@@ -145,7 +145,7 @@ a:hover {
   text-decoration: none;
 }
 
-button {
+button.button {
   border: 1px solid var(--secondary-shadow);
   background-color: var(--bg-color);
   color: var(--secondary-color);
@@ -157,7 +157,7 @@ button {
   font-family: var(--font-family);
 }
 
-button:hover {
+button.button:hover {
   border: 1px solid var(--secondary-color);
   color: var(--bg-color);
   background-color: var(--secondary-color);
@@ -835,7 +835,7 @@ section.projects {
   margin-bottom: var(--bottom-margin-3);
 }
 
-button .button{
+/* button.button{
   border: 1px solid var(--secondary-shadow);
   background-color: var(--bg-color);
   color: #a786db;
@@ -846,11 +846,11 @@ button .button{
   max-width:20em;
 }
 
-button .button:hover {
+button.button:hover {
   border: 1px solid var(--secondary-color);
   background-color: var(--secondary-color);
   transition: 0.4s;
-} 
+}  */
 
 /* ------------------------------------------- CASE STUDY OVERVIEW --------------------------------------------------------------------*/
 .project-image-section {
