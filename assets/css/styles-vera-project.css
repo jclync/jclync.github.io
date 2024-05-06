@@ -3,6 +3,7 @@
     /* --markup-color: #E5F2EB; */
     --markup-color: #ffd5de;
     --image-background-color: #eef2f8;
+    --project-image-background: #f9d7e4;
 }
 
 .project-image-section {
@@ -17,7 +18,7 @@
 
 /* Mint Mobile */
 h1, h1.case-study-title {
-    color: #FF829D;
+    color: #E0115F;
 }
 
 
@@ -37,6 +38,8 @@ h1, h1.case-study-title {
     display: flex;
     justify-content: center;
 }
+
+.bb-box { background-color: var(--project-image-background); }
 
 .scroll-container { 
     background-color: #333;

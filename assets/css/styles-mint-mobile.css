@@ -4,6 +4,7 @@
     /* --markup-color: #E5F2EB; */
     --markup-color: #e2eee7;
     --image-background-color: #eef2f8;
+    --project-image-background: #c5ddd0;
 }
 /* .section-regular {
     margin: auto;
@@ -13,16 +14,6 @@
 .section-bg-color {
     padding-top: 6rem;
 } */
-
-.section-regular {
-    margin: auto;
-    padding: 2rem 0 2rem;
-  }
-  
-.section-bg-color {
-    margin: auto;
-    padding: 2rem 15% 2rem;
-}
 
 .project-image-section {
     margin: 0;
@@ -39,6 +30,7 @@ h1, h1.case-study-title {
     color: #68AF85;
 }
 
+.bb-box { background-color: var(--project-image-background); }
 
 
 .competitive-analysis-image {
@@ -104,4 +96,7 @@ h1, h1.case-study-title {
 
     .survey-insight { flex-direction: column; gap: 0; }
     .survey-insight-image { max-width: 100%; }
+
+    .bb-box { margin-left: 0; margin-right: 0; border-radius: 3ch;  }
+    .key-takeaways ul { padding-left: 0; }
 }

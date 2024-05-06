@@ -2,15 +2,25 @@
 :root {
     --primary-color: #2a2d34;
     --markup-color: #e4d8f4;
+    --project-image-background: #f6f2fb;
+    --bg-color: #fafafa;
 }
 
-.section-regular {
+.box, .bb-box { background-color: var(--project-image-background);}
+
+/* .section-regular {
     margin: auto;
     padding: 2rem 0;
 }
 
 .section-bg-color {
     padding-top: 6rem;
+} */
+  
+.project-image-section {
+    padding: 5rem 0 3rem; 
+    background-color: #F6F2FB;
+    margin: 0; 
 }
 
 /* Husky Buddy */
@@ -18,11 +28,11 @@ h1, h1.case-study-title {
     color: #5D17C1;
 }
 
-.project-image-section {
+/* .project-image-section {
     margin: 0;
     padding: 5rem 0 0;
     background-color: #F6F2FB;
-}
+} */
 
 .findings-container.box {
     background-color: transparent;
@@ -33,6 +43,7 @@ h1, h1.case-study-title {
   
   .recommendations-container.box { 
     border-bottom: none; margin: auto; 
+    background-color: var(--project-image-background);
   }
 
 .final-deliverable {
@@ -65,9 +76,10 @@ h1, h1.case-study-title {
 
 @media only screen and (max-width: 768px) {
     /* tablet */
-    .section-regular { max-width: 75%; }
+    /* .section-regular { max-width: 75%; } */
     .section-bg-color { padding: 5rem 12% 3rem 13%;}
 
+    .overview-section { padding-top: 0; }
     .findings-recommendations-container { gap: 3rem;  }
     .findings-container.box { padding-right: 0; }
 
@@ -87,13 +99,14 @@ h1, h1.case-study-title {
     /* mobile */
     body { overflow-x: hidden; }
 
-    .section-bg-color {  padding: 2rem 5% 2rem 20%; }
+    .section-bg-color, .section-regular {  padding: 2rem 5% 2rem 20%; }
 
-    .section-regular {
+    /* .section-regular {
       margin-left: 20%;
       margin-right: 5%;
-    }
+    } */
 
+    .box, .bb-box { margin-left: 0; };
     p.subheader { margin-bottom: 0.5rem; }
 
     /* .findings-recommendations-container { padding-top: 3rem; border-top: 2px dashed var(--markup-color);}
@@ -102,8 +115,8 @@ h1, h1.case-study-title {
     .findings-recommendations-container { 
         flex-direction: column;
         gap: 0;
-        border-top: 2px dashed var(--markup-color);
-        margin-top: 3rem; 
+        /* border-top: 2px dashed var(--markup-color); */
+        margin-top: 0; 
     }
     
     .findings-container { 

@@ -1,11 +1,12 @@
 /* Variables */
 :root {
   --primary-color: #2a2d34;
+  --project-image-background: #f1d4dc;
   --markup-color: #f1d4dc;
 }
 
 /* Robert Half */
-.section-regular {
+/* .section-regular {
   margin: auto;
   padding: 2rem 0 2rem;
 }
@@ -13,7 +14,7 @@
 .section-bg-color {
   margin: auto;
   padding: 2rem 15% 2rem;
-}
+} */
 
 
 /* --------------------------------------------- PROJECTS SECTION ---------------------------------------------------------------------- */
@@ -49,8 +50,8 @@ h1, h1.case-study-title {
   aspect-ratio: 2661/4919;
 }
 
-.box {
-  background-color: var(--image-background-color);
+.box, .bb-box {
+  background-color: var(--project-image-background);
 }
 
 /* --------------------------------------------- RESPONSIVE LAYOUT ---------------------------------------------------------------------- */
@@ -59,7 +60,7 @@ h1, h1.case-study-title {
   /* [class*="col-"] {
     width: 100%;
   } */
-  .section-regular { max-width: 75%; }
+  /* .section-regular { max-width: 75%; } */
   .section-bg-color { padding: 5rem 12% 3rem 13%;}
   .project-context-container { flex-direction: column; }
   .proj-context {display: flex; }
@@ -69,11 +70,6 @@ h1, h1.case-study-title {
 @media only screen and (max-width: 425px) {
   /* mobile */
   .section-bg-color {  padding: 2rem 5% 2rem 20%; }
-
-  .section-regular {
-    margin-left: 20%;
-    margin-right: 5%;
-  }
 
   p.subheader { margin-bottom: 0.5rem; }
 

@@ -16,6 +16,7 @@
   /* --secondary-color: #5641B4;  */
   --secondary-color: #AD0042;
   --image-background-color: #eef2f8;
+  --project-image-color: #eef2f8;
   --box-color: #e6edff;
   --markup-color: #ece9fa;
   --primary-shadow: #8b8eaf;
@@ -331,12 +332,18 @@ body {
   color: var(--secondary-color);
 }
 
-.section-regular {
+/* .section-regular {
   max-width: 70%;
-  /* margin: var(--section-margin); */
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   padding: 5rem 0 6rem;
+} */
+
+.section-regular {
+  background-color: #fcfdfd;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5rem 15% 3rem;
 }
 
 .section-bg-color {
@@ -345,6 +352,15 @@ body {
   margin: 0 auto;
   width: 100%;
   padding: 5rem 15% 3rem;
+}
+
+#case-study-page .section-regular {
+  padding: 2rem 15%; 
+}
+
+#case-study-page .section-bg-color {
+  padding: 2rem 15% 3rem; 
+  margin: 0; 
 }
 
 .div-margin { margin: var(--div-margin); }
@@ -490,11 +506,13 @@ div.column {
 
 /* --------------------------------------------- HERO -----------------------------------------------------------------------------*/
 section#about {
-  margin-top: 7rem;
-  max-width: 80%;
-  margin: var(--section-margin);
+  max-width: 100%;
+  /* margin: var(--section-margin); */
   width: 100%;
-  padding: 0;
+  height: 100vh; 
+  padding: 1rem 10% 7rem; 
+  /* margin-bottom: 7rem;  */
+  /* padding: 0; */
 }
 
 section#about-me, #playground {
@@ -528,6 +546,7 @@ section#about-me, #playground {
   /* width: 325px; */
   /* height: auto; */
   aspect-ratio: 1/1;
+  background-color: white;
 }
 
 .playground-heading {
@@ -804,8 +823,9 @@ section.projects {
 
 .project-img {
   width: 400px;
-  height: 400px;
+  height: auto;
   border-radius: 2rem;
+  aspect-ratio: 1/1; 
 }
 
 .project-info {
@@ -1002,9 +1022,9 @@ i.close-overlay:hover {
 
 /* --------------------------------------------- ABOUT BENTO --------------------------------------------------------------------*/
 .about-me-section {
-  max-width: 80vw; 
-  margin: auto; 
-  padding-top: 7rem; 
+  /* max-width: 80vw; 
+  margin: auto;  */
+  padding: 7rem 10%;
 }
 
 .dashboard {
@@ -1035,6 +1055,7 @@ i.close-overlay:hover {
 }
 
 @media (min-width: 768px) {
+  /* desktop */
   .design-philosophy-box { --gc: span 6;  }
   .outside-of-design-box { --gc: span 2;--gr: span 2; }
   .quick-links-box { --gc: span 2; }
@@ -1042,6 +1063,7 @@ i.close-overlay:hover {
   .i-am-box { --gc: span 2; --gr: span 2; }
   .bio-box { --gc: span 4; }
   .profile-image-box { --gc: span 2; --gr: span 2; }
+  .activity-feed { --gc: span 2; }
 }
 
 /* --------------------------------------------- DESIGN PHILOSOPHY --------------------------------------------------------------------*/
@@ -1282,15 +1304,31 @@ label.staticrypt-remember {
     aspect-ratio: 1/1;
   }
 
-
   section#about {
-    max-width: 95%;
+    /* max-width: 95%; */
     margin: auto !important;
+    padding: 0 3% 7rem; 
   }
 
   #about-me {
     padding-top: 6rem;
     max-width: 90%;
+  }
+
+  .about-me-section { padding: 6rem 3%; }
+
+  .about-me-section .dashboard {
+    & .profile-image-box {
+      --gc: span 3; --gr: span: 1;  
+    } .bio-box {
+      --gc: span 3; 
+    } .i-am-box {
+      --gc: span 4;
+    } .outside-of-design-box {
+      --gc: span 6;
+    } .activity-feed {
+      --gr: span 2; 
+    }
   }
 
   #more { max-width: 90%; }
@@ -1313,6 +1351,8 @@ label.staticrypt-remember {
     padding: 2.5rem 0.5rem; 
     width: 60vw;  
   }
+
+  section.projects, section.playground { padding: 0 5%; }
 
   .projects {
     padding-left: 5%;
@@ -1338,6 +1378,8 @@ label.staticrypt-remember {
 
 @media only screen and (max-width: 425px) {
   /* mobile */
+  #case-study-page .section-bg-color, #case-study-page .section-regular {  padding: 2rem 5% 2rem 20%; }
+
   .navbar-right {
     position: fixed;
     background-color: var(--bg-color);
@@ -1365,6 +1407,7 @@ label.staticrypt-remember {
 
   .burger-menu { display: block; }
   p.secondary { font-size: 0.9rem; }
+  p.subheader { margin-bottom: 0.5rem; }
   .side-bar li { font-size: 0.7rem; }
   .sidenav a { padding: 0.75rem 0.5rem; }
   .sidenav { left: 0; }
@@ -1380,6 +1423,12 @@ label.staticrypt-remember {
   }
 
   #about-me, #more { max-width: 75%; }
+
+  .about-me-section .dashboard {
+    & > div {
+      --gc: span 1 !important; 
+    }
+  }
 
   .bio-container {  flex-direction: column;  }
   .hero-img { max-width: 80vw; height: auto; }

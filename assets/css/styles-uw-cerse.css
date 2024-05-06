@@ -10,24 +10,23 @@
   --bg-color: #fafafa;
   --secondary-shadow: #b3b3b3;
   --img-margin: 3rem auto 4rem;
+  /* --project-background-color: #f3f3f8; */
+  --project-background-color: #dcdbea; 
 }
 
-.section-regular {
+/* .section-regular {
   margin: auto;
   padding: 2rem 0 2rem;
 }
 
 .project-image-section {
   padding: 5rem 0 0;
-}
+} */
 
-.section-bg-color {
-  padding-top: 6rem;
-}
-
-.section-bg-color {
-  margin: auto;
-  padding: 2rem 15% 2rem;
+.project-image-section {
+  padding: 6rem 0 3rem; 
+  background-color: #f3f3f8;
+  margin: 0; 
 }
 
 /* --------------------------------------------- OVERVIEW SECTION ---------------------------------------------------------------------- */
@@ -50,6 +49,8 @@ h1.case-study-title {
 .research-goal {
   width: 33.33%
 }
+
+.bb-box { background-color: var(--project-background-color); }
 
 .column-header {
   font-size: 18px;
@@ -101,6 +102,13 @@ span.quotation {
   line-height: 0; 
 }
 
+.dashboard {
+  & > * {
+    background-color: var(--project-background-color);
+    border: 1px solid var(--project-background-color);
+  }
+}
+
 .dashboard .interview-image-overlay {
   position: absolute;
   top: 0;
@@ -111,7 +119,7 @@ span.quotation {
   width: 100%;
   opacity: 0;
   transition: 1s ease;
-  background-color: var(--image-background-color);
+  background-color: var(--project-background-color);
   border-radius: 2ch;
   padding: 2rem; 
 }
@@ -224,7 +232,7 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   align-items: center;
   padding: 1rem 2rem;
   gap: 2rem; 
-  background-color: var(--image-background-color);
+  background-color: var(--bg-color);
 }
 
 .recommendation-item p {
@@ -240,10 +248,12 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   width: 15vw;
   height: auto;
   background-color: white; 
+  border: 1px solid var(--project-background-color); 
   border-radius: 5ch; 
 }
 
 .carousel-item svg, .carousel-item rect { height: 70vh; }
+.carousel-item rect { fill: var(--project-background-color); }
 
 /* .carousel-container {
   display: flex;
@@ -427,19 +437,30 @@ Source: https://codepen.io/stoumann/pen/GRzWVjZ
   color: var(--primary-color);
 }
 
-#final-designs {
-  max-width: 80vw;
-}
-
-.final-design-image {
-  border-radius: 2ch;
-  width: 55vw !important;
+section.section-regular#final-designs {
+  max-width: 100vw;
+  margin: auto 0; 
+  padding: 0 10%;
 }
 
 .final-design-container {
   display: flex;
-  gap: 2rem; 
+  gap: 3rem; 
 }
+
+.final-design-image {
+  border-radius: 2ch;
+  width: 50vw !important;
+}
+
+/*
+.final-design-image {
+  border-radius: 2ch; 
+  width: 40vw;
+  object-fit: fill;
+  height: auto; 
+} */
+
 
 
 /* --------------------------------------------- REFLECTION SECTION ------------------------------------------------------------------ */
@@ -463,10 +484,10 @@ ul.key-takeaways, ul.next-steps {
 /*changes reflects on screen with a width of 768px and below*/
 @media screen and (max-width: 768px) {
   /* tablet */
-  .section-regular { max-width: 75%; }
+  /* .section-regular { max-width: 75%; } */
   .section-bg-color { padding: 5rem 12% 3rem 13%;}
-  .project-image-section { margin: auto !important; }
-
+  /* .project-image-section { margin: auto !important; } */
+  .discovery-section { padding-top: 0; }
   .bb-bento-box { flex-direction: column; }
   .bb-box {  aspect-ratio: auto; }
 
@@ -504,7 +525,10 @@ ul.key-takeaways, ul.next-steps {
   .competitive-analysis-container { flex-direction: column;}
   .findings-recommendations-container { gap: 3rem;  }
   .findings-container.box { padding-right: 0; }
-  .recommendation-item { padding: 2rem; }
+  .recommendation-item { 
+    padding: 2rem; 
+    background-color: var(--project-background-color);
+  }
   .brainstorm-image { width: 20vw; border-radius: 3ch; }
 
   p.subheader { margin-bottom: 0.5rem; }
@@ -542,10 +566,10 @@ ul.key-takeaways, ul.next-steps {
   /* mobile */
   .section-bg-color {  padding: 2rem 5% 2rem 20%; }
 
-  .section-regular {
+  /* .section-regular {
     margin-left: 20%;
     margin-right: 5%;
-  }
+  } */
 
   .project-context-container { flex-direction: column; }
   .project-context { width: 100%; }
@@ -567,6 +591,8 @@ ul.key-takeaways, ul.next-steps {
     flex-direction: column; 
     gap: 1rem;
   }
+
+  .research-goals-list .bb-box { margin-left: 0; }
   
   .column { width: 100% !important; }
   .surveys .bb-box { margin: 1rem 0; }
@@ -588,6 +614,8 @@ ul.key-takeaways, ul.next-steps {
     padding-bottom: 0;
     margin-bottom: 0;
   }
+
+  .finding-item, .recommendation-item { margin: 0; }
 
   .iteration-container { gap: 2rem; }
 
