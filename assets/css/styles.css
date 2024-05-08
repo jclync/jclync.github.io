@@ -371,6 +371,10 @@ body {
   flex-direction: column;  
 }
 
+.flipped {
+  flex-direction: row-reverse;
+}
+
 .no-bottom-border { border-bottom: none !important; }
 .no-top-border { border-top: none !important; }
 .no-top-margin { padding-top: 0 !important;}
@@ -819,6 +823,7 @@ section.projects {
   display: flex;
   padding: 2rem 0rem;
   gap: 5rem;
+  justify-content: space-between;
 }
 
 .project-img {
@@ -938,8 +943,32 @@ p.image-caption {
   align-items: center;
 }
 
+/* --------------------------------------------------------------- DESIGN SPRINT ---------------------------------------------------- */
+.sprint-context-container {
+  width: 100%; 
+  border: 1.5px solid var(--image-background-color);
+  border-radius: 2ch; 
+  padding: 3rem; 
+}
 
+.sprint-image {
+  height: 90vh;
+  width: auto;
+}
+/* .website-image {
+  height: 50vh;
+  width: auto; 
+}
 
+.mockup-context {
+  display: flex; 
+  gap: 2rem; 
+}
+
+.mockup-image {
+  width: 40vw; 
+  height: auto; 
+} */
 
 /* --------------------------------- PASSWORD PROTECTED CASE STUDY --------------------------------------------------------------------*/
 div.password-protected-content h2 {
@@ -1031,9 +1060,10 @@ i.close-overlay:hover {
   display: grid;
   gap: 1.5rem;
   & > * {
-    background-color: var(--image-background-color);
+    /* background-color: var(--image-background-color); */
+    background-color: transparent;
     border-radius: 2ch;
-    border: 1px solid var(--image-background-color);
+    border: 1.5px solid var(--image-background-color);
     container-type: inline-size;
     grid-column: var(--gc, auto);
     grid-row: var(--gr, auto);
@@ -1062,7 +1092,7 @@ i.close-overlay:hover {
   .dashboard { grid-template-columns: repeat(6, 1fr); }
   .i-am-box { --gc: span 2; --gr: span 2; }
   .bio-box { --gc: span 4; }
-  .profile-image-box { --gc: span 2; --gr: span 2; }
+  .profile-image-box { --gc: span 2; --gr: span 2; border: none; }
   .activity-feed { --gc: span 2; }
 }
 
@@ -1331,6 +1361,8 @@ label.staticrypt-remember {
     }
   }
 
+  .sprint-image { width: 90vw; height: auto; }
+
   #more { max-width: 90%; }
   .grid-container { gap: 3rem; }
 
@@ -1352,7 +1384,7 @@ label.staticrypt-remember {
     width: 60vw;  
   }
 
-  section.projects, section.playground { padding: 0 5%; }
+  section.projects, section.playground { padding: 7rem 5%; }
 
   .projects {
     padding-left: 5%;
@@ -1470,9 +1502,8 @@ label.staticrypt-remember {
     aspect-ratio: 1/1;
   }
 
-  .project-container { flex-direction: column;}
-  .project-container.flipped { flex-direction: column-reverse;}
-  .project-img { width: 85vw;}
+  .project-container { flex-direction: column; gap: 1rem; }
+  .project-img { width: 100%;}
   .project-info {  max-width: 85vw;  }
 
   footer .two-column { flex-direction: row !important; }
