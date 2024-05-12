@@ -371,9 +371,8 @@ body {
   flex-direction: column;  
 }
 
-.flipped {
-  flex-direction: row-reverse;
-}
+.flipped {  flex-direction: row-reverse;}
+.rounded { border-radius: 2ch; }
 
 .no-bottom-border { border-bottom: none !important; }
 .no-top-border { border-top: none !important; }
