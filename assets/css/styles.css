@@ -396,6 +396,19 @@ body {
   gap: 5rem;
 }
 
+.two-image-container {
+  display: flex; 
+  max-width: 100vw;
+  height: auto; 
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.two-image-container .auto-height {
+  width: 40vw;
+  height: auto; 
+}
+
 .right-align-text { text-align: right; }
 
 .two-bento-box {
@@ -883,7 +896,9 @@ button.button:hover {
 }
 
 .project-image {
-  max-width: 100vw;
+  /* max-width: 100vw; */
+  height: 70vh; 
+  width: auto;
 }
 
 .project-context-container {
@@ -905,10 +920,6 @@ button.button:hover {
 h1.case-study-title {
   color: var(--secondary-color);
   margin-bottom: 0;
-}
-
-.project-image {
-  max-width: 100vw;
 }
 
 .project-overview-container {
@@ -954,6 +965,11 @@ p.image-caption {
 .sprint-image {
   height: 90vh;
   width: auto;
+}
+
+.sprint-image-medium {
+  height: 70vh;
+  width: auto; 
 }
 /* .website-image {
   height: 50vh;

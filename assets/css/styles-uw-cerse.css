@@ -142,9 +142,16 @@ span.quotation {
   padding-left: 0; 
 }
 
-.interview-poc, .interview-codebook, .interview-themes { padding: 0; }
-.interview-poc, .interview-rabbit-hole, .quote-box { background-color : white; }
-.quote-box p { font-size: 0.9rem; }
+.interview-quote, .quote-box {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+
+.interview-poc, .interview-codebook, .interview-themes, .interview-quote { padding: 0; }
+.interview-poc, .interview-rabbit-hole, .quote-box, .interview-quote { background-color : white; }
+.quote-box p, .interview-quote p { font-size: 0.9rem; }
 
 /* div.column {  width: 50%;} */
 
