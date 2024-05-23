@@ -103,6 +103,12 @@ p.secondary.caps {
   font-variant: small-caps;
 }
 
+span.no-caps {
+  font-variant:normal;
+  color: var(--primary-color);
+  font-size: 1rem; 
+}
+
 p.tertiary {
   font-family: var(--secondary-font-family);
 }
