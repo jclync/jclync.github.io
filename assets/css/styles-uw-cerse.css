@@ -109,7 +109,9 @@ span.quotation {
   }
 }
 
-.dashboard .interview-image-overlay {
+.hover-container { position: relative; }
+
+.interview-image-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -124,7 +126,7 @@ span.quotation {
   padding: 2rem; 
 }
 
-.container:hover .interview-image-overlay {
+.hover-container:hover .interview-image-overlay {
   opacity: 1;
 }
 
