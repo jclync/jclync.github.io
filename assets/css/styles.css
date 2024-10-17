@@ -622,26 +622,18 @@ section#about-me, #playground {
   align-items: center;
 }
 
-.playground-div#design-sprint, .playground-item#design-sprint {
-  background-color: #EEF0E6;
-}
-
-.playground-item.linkable:hover, .playground-div.linkable:hover {
-  transform: scale(1.03);
-}
+.playground-div#design-sprint, .playground-item#design-sprint { background-color: #EEF0E6; }
+.playground-div#vera-project, .playground-item#vera-project { background-color: #FFF8F9; }
+.playground-item.linkable:hover, .playground-div.linkable:hover {  transform: scale(1.03);}
 
 .playground-item-container .subheader {
   margin-top: 1rem;
   margin-bottom: 0; 
 }
 
-.playground-item-container a:hover {
-  color: var(--secondary-color);
-}
+.playground-item-container a:hover {  color: var(--secondary-color);}
 
-.landscape img {
-  border-radius: 0 !important; 
-}
+.landscape img {  border-radius: 0 !important; }
 
 .playground-item img {
   width: 100%;
