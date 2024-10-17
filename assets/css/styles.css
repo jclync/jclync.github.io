@@ -622,8 +622,8 @@ section#about-me, #playground {
   align-items: center;
 }
 
-.playground-div#vera-project, .playground-item#vera-project {
-  background-color: #FFF8F9;
+.playground-div#design-sprint, .playground-item#design-sprint {
+  background-color: #EEF0E6;
 }
 
 .playground-item.linkable:hover, .playground-div.linkable:hover {
@@ -869,8 +869,8 @@ section.projects {
 }
 
 .project-img:hover {
-  filter: brightness(90%);
-  transform: scale(0.97);
+  filter: brightness(101.5%);
+  transform: scale(1.04);
   transition: var(--transition)
 }
 
