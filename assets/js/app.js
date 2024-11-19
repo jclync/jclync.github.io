@@ -3,20 +3,21 @@
   Source: https://www.w3schools.com/howto/howto_js_navbar_slide.asp
 */
 //if (window.location.href=="https://jclync.github.io/" || window.location.href=="http://127.0.0.1:5501/") {
-  if(document.body.className == 'home-page'){
+if(document.body.className == 'home-page'){
     window.onscroll = function() {scrollFunction()};
   }
   
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar-scroll-down").style.top = "0";
-      document.getElementById("scroll-up").style.display = "block";
+      //document.getElementById("navbar-scroll-down").style.top = "0";
+      //document.getElementById("scroll-up").style.display = "block";
+      document.getElementById("navbar-scroll-down").style.backgroundColor = "transparent";
     } else {
-      document.getElementById("navbar-scroll-down").style.top = "-100px";
-      document.getElementById("scroll-up").style.display = "none";
+      //document.getElementById("navbar-scroll-down").style.top = "-100px";
+      //document.getElementById("scroll-up").style.display = "none";
     }
   }
-  
+ 
   
   // Hide navbar when scroll down. Show navbar when scroll up.
   // Source : https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp

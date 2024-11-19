@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+/*
+old font
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
+*/
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Inter:wght@100..900&family=Kadwa:wght@400;700&family=Nanum+Gothic&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* Variables */
 :root {
   --font-family: "Noto Sans", sans-serif;
-  --headline-font-family: "Sofia Sans", sans-serif;
+  --headline-font-family: "Kadwa", sans-serif;
   --secondary-font-family: "Noto Sans Mono", sans-serif;
   --normal-font: 400;
   --bold-font: 700;
@@ -32,10 +35,6 @@
   --transition: 0.3s;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* --------------------------------------------- CSS RESETS --------------------------------------------------------------------*/
 * {
   margin: 0;
@@ -43,14 +42,11 @@ html {
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
+body {  font-family: var(--font-family);}
+html {  scroll-behavior: smooth; }
+ul {  list-style-type: none; }
+a {  text-decoration: none; color: var(--primary-color); }
+a:hover {  text-decoration: none;}
 
 h1, h2, h3 {
   margin-bottom: var(--bottom-margin-2);
@@ -95,7 +91,7 @@ p.secondary {
   color: var(--secondary-shadow);
   /* margin-bottom: var(--bottom-margin-2); */
   line-height:normal;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 p.secondary.caps {
@@ -110,47 +106,16 @@ span.no-caps {
   font-size: 1rem; 
 }
 
-p.tertiary {
-  font-family: var(--secondary-font-family);
-}
-
-a.secondary {
-  font-family: var(--secondary-font-family);
-}
-
-span.markup {
-  background-color: var(--markup-color);
-}
-
-.underline {
-  text-decoration: underline;
-}
+p.tertiary {  font-family: var(--secondary-font-family);}
+a.secondary {  font-family: var(--secondary-font-family);}
+span.markup {  background-color: var(--markup-color);}
+.underline {  text-decoration: underline; }
+.secondary-span {  color: var(--secondary-color);}
 
 .link:hover {
   color: var(--secondary-color);
   text-decoration: underline;
   transition: 0.2s;
-}
-
-body {
-  font-family: var(--font-family);
-  /*font-family: monospace;*/
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 button.button {
@@ -178,10 +143,11 @@ button.button:hover {
 #navbar-scroll-down, #navbar {
   background-color: var(--bg-color);
   position: fixed;
-  top: -100px;
+  top: 0px;
+  /* top: -100px; */
   width: 100vw;
   transition: top var(--transition);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); */
   z-index: 10;
   /* padding: 1.5rem 3.5rem; */
   padding: 0.5rem;
@@ -214,32 +180,45 @@ button.button:hover {
 .navbar-right {
   display: flex;
   float: right;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 #navbar a, #navbar-scroll-down a {
-  float: right;
   color: var(--primary-color);
   display: block;
   text-align: center;
-  /* padding: 1.2rem; */
-  margin: 1.2rem;
+  padding: 1.2rem;
+  /* margin: 1.2rem; */
   text-decoration: none;
   font-weight: var(--bold-font);
   border-radius: 2ch;
 }
 
-#navbar a.home-item, #navbar-scroll-down a.home-item {
+#navbar-right a {  float: right; }
+a.home-item {float:left;}
+
+/* #navbar a.home-item, #navbar-scroll-down a.home-item {
   float: left;
   display: block;
   color: var(--primary-color);
   text-align: center;
-  /* padding: 1.2rem; */
-  margin: 1.2rem;
+  padding: 1.2rem;
   text-decoration: none;
   font-weight: var(--bold-font);
   border-radius: 2ch;
-}
+} */
+
+/* #navbar a.home-item, #navbar-scroll-down a.home-item {
+  float: left;
+  display: block;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 0rem !important;
+  margin: 1.2rem !important;
+  text-decoration: none;
+  font-weight: var(--bold-font);
+  border-radius: 2ch;
+} */
 
 #navbar a.home-item:hover, #navbar-scroll-down a.home-item:hover {
   color: var(--secondary-color);
@@ -247,14 +226,13 @@ button.button:hover {
   transition: var(--transition);
 } 
 
-/* #navbar .nav-item:hover, #navbar-scroll-down .nav-item:hover {
-  color: var(--secondary-color);
-  background-color: #ebedf2;
-  transition: var(--transition);
-} */
-
 #navbar a.active, #navbar-scroll-down a.active {
   color: var(--secondary-color);  
+  transition: var(--transition);
+}
+
+#navbar a.nav-item:hover, #navbar-right a.nav-item:hover {
+  background-color: #ebedf2;
   transition: var(--transition);
 }
 
@@ -271,7 +249,7 @@ button.button:hover {
    underline hover left to right
    source: https://averyykyler.medium.com/left-to-right-underline-effect-using-css-e9aa2c5dea1e 
 */ 
-a.nav-item {  position: relative; }
+/* a.nav-item {  position: relative; }
 
 a.nav-item::before, a.nav-item::after {
   content: "";
@@ -282,7 +260,7 @@ a.nav-item::before, a.nav-item::after {
   border-top-color: var(--secondary-color);
 }
 
-a.nav-item::before {  width: 100%; /* border-top-style: dotted; */ }
+a.nav-item::before { width: 100%; }
 
 a.nav-item::after {
   border-top-style: solid;
@@ -290,7 +268,7 @@ a.nav-item::after {
   transition: width .2s ease;
 }
 
-a.nav-item:hover::after { width: 100%; transition: 0.5s; }
+a.nav-item:hover::after { width: 100%; transition: 0.5s; } */
 
 .burger-menu {
   color: var(--primary-color);
@@ -531,9 +509,9 @@ div.column {
 section#about {
   max-width: 100%;
   /* margin: var(--section-margin); */
-  width: 100%;
-  height: 100vh; 
-  padding: 1rem 10% 7rem; 
+  width: 100vw;
+  height: 70vh; 
+  /* padding: 10% 7rem;  */
   /* margin-bottom: 7rem;  */
   /* padding: 0; */
 }
@@ -827,7 +805,6 @@ section#about-me, #playground {
 /* --------------------------------------------- PROJECTS --------------------------------------------------------------------*/
 section.projects {
   padding: 5rem 13% 3rem;
-  padding-top: 7rem;
 }
 
 .project-container {
@@ -852,12 +829,7 @@ section.projects {
 }
 
 .project-title {
-  font-size: 50px;
-  color: var(--primary-color);
-  text-decoration: none;
-  position: relative;
-  width: fit-content;
-  block-size: fit-content; 
+  font-family: var(--font-family);
 }
 
 .project-img:hover {
